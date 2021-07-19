@@ -1,6 +1,6 @@
 <template>
   <div>
-    <base-card>
+    <base-card class="bar-chart-container">
       <div class="border-bottom"> 
         <p class="font-big nomargin">{{ title }}</p>
       </div>
@@ -113,6 +113,9 @@ export default {
 </script>
 
 <style scoped>
+.bar-chart-container{
+  margin: 30px 0;
+}
 .radio-container {
   display: inline-flex;
   flex-wrap: nowrap;

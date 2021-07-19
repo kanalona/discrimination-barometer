@@ -45,7 +45,6 @@
     </banner>
 
     <inner-wrapper id="barcharts">
-      <div class="bar-charts-container">
         <bar-chart
           :title="'Persönliche Merkmale'"
           :keySelection="personalKeys"
@@ -56,7 +55,6 @@
           :keySelection="careerKeys"
           :showViewToggle="true"
         />
-      </div>
     </inner-wrapper>
   </div>
 </template>
@@ -90,11 +88,3 @@ export default {
   },
 };
 </script>
-
-<style  scoped>
-.bar-charts-container {
-  display: grid;
-  grid-gap: 30px;
-  padding: 30px 0;
-}
-</style>
