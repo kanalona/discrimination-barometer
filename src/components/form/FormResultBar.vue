@@ -51,7 +51,8 @@ export default {
 
 <style scoped>
 .result-container {
-  background-color: rgba(241, 241, 241, 0.8); /* #f1f1f1 */
+  /* background-color: rgba(241, 241, 241, 0.8);  */
+  /* #f1f1f1 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,15 +60,7 @@ export default {
   position: fixed;
   bottom: 0;
 }
-.card {
-  /* background: #f2685d; */
-  background: #fff;
-  opacity: 100%;
-  width: 100%;
-  padding: 0.5rem;
-}
 .progress {
-  /* background: #ccc; */
   background: #e8e8e8;
   border-radius: 100px;
   position: relative;
@@ -77,7 +70,6 @@ export default {
   width: auto;
 }
 .progress-value {
-  /* box-shadow: 0 10px 40px -10px #fff; */
   display: flex;
   justify-content: center;
   align-items: center;

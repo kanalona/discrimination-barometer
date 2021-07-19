@@ -22,7 +22,6 @@
       </p>
     </base-card>
     <div v-show="showMore" class="personas" id="personas">
-      <!-- <div class="personas-item"> -->
       <base-card class="persona1">
         <p class="nomargin">
           <strong>Linda</strong> ist weiblich, 51 Jahre, wohnt in Graz, hat eine
@@ -41,8 +40,6 @@
           Betreuung durch das AMS
         </p>
       </base-card>
-      <!-- </div> -->
-      <!-- <div class="personas-item"> -->
       <base-card class="persona2">
         <p class="nomargin">
           <strong>Thomas</strong> ist männlich, 23 Jahre, wohnt in Innsbruck,
@@ -63,7 +60,6 @@
           Betreuung durch das AMS
         </p>
       </base-card>
-      <!-- </div> -->
     </div>
   </div>
 </template>
