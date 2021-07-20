@@ -24,7 +24,7 @@
       </template>
     </banner>
     <div id="context">
-      <tabs :tabs="subRoutes"></tabs>
+      <tabs :tabs="tabLinks"></tabs>
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      subRoutes: [
+      tabLinks: [
         {
           name: "Zwei Geschlechter?",
           link: "/kontext/zwei-geschlechter",

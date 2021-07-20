@@ -1,25 +1,23 @@
 <template>
   <div class="banner" :style="{ backgroundColor: backgroundColor }">
     <inner-wrapper>
-    <!-- <header>
-        <slot name="header"></slot>
-      </header>
-      <slot></slot> -->
-    <div class="container left">
-      <div class="heading">
-        <slot name="heading"></slot>
-      </div>
-      <div class="content">
-        <slot name="content"></slot>
-      </div>
-      <div class="button">
-        <slot name="button"></slot>
-      </div>
-      <div class="more-content">
-        <slot name="more-content"></slot>
-      </div>
-    </div>
-    <slot></slot>
+      <slot></slot>
+      <slot name="description">
+        <div class="container left">
+          <div class="heading">
+            <slot name="heading"></slot>
+          </div>
+          <div class="content">
+            <slot name="content"></slot>
+          </div>
+          <div class="button">
+            <slot name="button"></slot>
+          </div>
+          <div class="more-content">
+            <slot name="more-content"></slot>
+          </div>
+        </div>
+      </slot>
     </inner-wrapper>
   </div>
 </template>
@@ -65,7 +63,7 @@ export default {
 .more-content {
   grid-area: more-content;
 }
-.button{
+.button {
   grid-area: button;
 }
 @media (max-width: 800px) {

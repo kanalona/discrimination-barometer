@@ -29,16 +29,21 @@
           Pass und hat einen Pflichtschulabschluss gemacht. Bisher hat sie im
           Dienstleistungsbereich (z.B. im Handel) gearbeitet. In den letzten
           vier Jahren war sie einmal für knapp 1 Jahr arbeitslos gemeldet und
-          hat an unterstützenden Maßnahmen des AMS teilgenommen<sup>1</sup>. Sie
-          beginnt einen neuen Job im Supermarkt, aber die Filiale, in der Linda
-          arbeitet schließt und den Mitarbeiter*innen werden gekündigt. Nun
-          nimmt Linda wieder den Weg zum AMS und bekommt eine Integrationschance
-          in den Arbeitsmarkt von <strong>1,98%</strong> errechnet.
+          hat an unterstützenden Maßnahmen des AMS teilgenommen<sup
+            class="font-small"
+            >1</sup
+          >. Sie beginnt einen neuen Job im Supermarkt, aber die Filiale, in der
+          Linda arbeitet schließt und den Mitarbeiter*innen werden gekündigt.
+          Nun nimmt Linda wieder den Weg zum AMS und bekommt eine
+          Integrationschance in den Arbeitsmarkt von
+          <strong>1,98%</strong> errechnet.
         </p>
-        <p class="footnote">
-          <sup>1 </sup>Kriterien: unter 75% Beschäftigungstage und über 180 Tage
-          Betreuung durch das AMS
-        </p>
+        <div class="footnote">
+          <p>
+            <sup>1 </sup>Kriterien: unter 75% Beschäftigungstage und über 180
+            Tage Betreuung durch das AMS
+          </p>
+        </div>
       </base-card>
       <base-card class="persona2">
         <p class="nomargin">
@@ -48,17 +53,19 @@
           gemacht (z.B. als Tischler). Die letzten 4 Jahre war er in diesem
           Bereich vollbeschäftigt, hat aber einmal im Jahr nach einem neuen Job
           gesucht und sich für ca. 2,5 Monate pro Jahr beim AMS arbeitslos
-          gemeldet<sup>2</sup>. Jedes Mal wurde er nach dieser Zeit ohne
-          Teilnahme an Maßnahmen des AMS wieder erwerbstätig. Thomas beginnt
-          einen neuen Job, doch die Firma in der er arbeitet geht bankrott und
-          die Mitarbeiter*innen verlieren ihre Arbeit. Nun nimmt Thomas wieder
-          den Weg zum AMS und bekommt eine Integrationschance in den
-          Arbeitsmarkt von <strong>93,64%</strong> errechnet.
+          gemeldet<sup class="font-small">2</sup>. Jedes Mal wurde er nach
+          dieser Zeit ohne Teilnahme an Maßnahmen des AMS wieder erwerbstätig.
+          Thomas beginnt einen neuen Job, doch die Firma in der er arbeitet geht
+          bankrott und die Mitarbeiter*innen verlieren ihre Arbeit. Nun nimmt
+          Thomas wieder den Weg zum AMS und bekommt eine Integrationschance in
+          den Arbeitsmarkt von <strong>93,64%</strong> errechnet.
         </p>
-        <p class="footnote">
-          <sup>2 </sup>Kriterien: über 75% Beschäftigungstage und unter 180 Tage
-          Betreuung durch das AMS
-        </p>
+        <div class="footnote">
+          <p>
+            <sup>2 </sup>Kriterien: über 75% Beschäftigungstage und unter 180
+            Tage Betreuung durch das AMS
+          </p>
+        </div>
       </base-card>
     </div>
   </div>

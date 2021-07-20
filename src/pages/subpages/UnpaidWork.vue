@@ -17,9 +17,7 @@
               falls sie Betreuungspflichten haben. Hier wird sichtbar, was auf
               dem Arbeitsmarkt Realität ist: Wenn Frauen Kinder bekommen, hat
               das einen negativen Einfluss auf ihre Chancen auf dem
-              Arbeitsmarkt, wenn Männer Kinder bekommen nicht. Oft ist es im
-              Gegenteil sogar so, dass sie dann eine Beförderung erhalten, mit
-              dem Argument, dass sie jetzt ein Familie zu ernähren haben.
+              Arbeitsmarkt, wenn Männer Kinder bekommen nicht.
             </p>
           </div>
           <div class="summary2">
@@ -47,13 +45,26 @@
             </base-card>
           </div>
           <div class="summary3">
-            <p class="highlighted-text">
-              Man kann hier also nicht nur von einem Gender Gap sprechen,
-              sondern auch vor allem von einem Mother Gap. Dass Frauen die
-              meiste unbezahlte Arbeit übernehmen hat zur Folge, dass mehr
-              Frauen in Teilzeit arbeiten, weniger verdienen und auch weniger
-              Chancen auf dem Arbeitsmarkt haben.
-            </p>
+            <div class="highlighted-container">
+              <p class="highlighted-text">
+                Man kann hier also nicht nur von einem Gender Gap sprechen,
+                sondern auch vor allem von einem Mother Gap. Dass Frauen die
+                meiste unbezahlte Arbeit übernehmen hat zur Folge, dass Frauen
+                weniger erwerbstätig sind, beziehungsweise in Teilzeit oder
+                flexibel arbeiten und weniger verdienen.<sup class="font-small"
+                  >1</sup
+                >
+                Diese Faktoren tragen dazu bei, dass Frauen schlechtere Chancen
+                auf dem Arbeitsmarkt haben.
+              </p>
+              <div class="footnote">
+                <p>
+                  <sup>1</sup> Kleven, H.; Landais, C.; Søgaard, J.
+                  (2019): Children and Gender Inequality: Evidence from Denmark,
+                  American Economic Jourcal: Applied Economics, 11(4): 181-209
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </inner-wrapper>
@@ -73,20 +84,21 @@
             <p class="nomargin">
               Zum Beispiel können gesetzliche Regelungen zur Elternzeit
               beeinflussen, wer sich wie lange Zeit für Kinderbetreuung nimmt
-              <em><strong>(strukturelle Ebene)</strong></em>. Eine weitere Rolle spielt
-              zum Beispiel auch das Arbeitsmarkt Service (AMS), welches mit
-              Hilfe des AMS-Algortihmus reguliert, dass Frauen mit
-              Betreuungspflichten weiterhin diskriminiert werden
-              <em><strong>(disziplinäre Ebene)</strong></em>. Aber auch kulturelle
-              Vorstellungen darüber wer für die Kinderbetreuung zuständig sein
-              sollte haben Einfluss auf die Erhaltung dieses dominanten Modells
-              <em><strong>(hegemoniale Ebene)</strong></em>. Ebenso spielen individuellen
-              Erfahrungen eine Rolle
-              <em><strong>(zwischenmenschliche Ebene)</strong></em>. Das können zum
-              Beispiel Erfahrungen mit Vorwürfen sein („Wie kannst du deine
-              Interessen deinen Kindern vorziehen?“) oder auch individuelle
-              Bedürfnisse („Ich möchte gerne mehr Zeit mit meinen Kindern
-              verbringen.“)
+              <em><strong>(strukturelle Ebene)</strong></em
+              >. Eine weitere Rolle spielt zum Beispiel auch das Arbeitsmarkt
+              Service (AMS), welches mit Hilfe des AMS-Algortihmus reguliert,
+              dass Frauen mit Betreuungspflichten weiterhin diskriminiert werden
+              <em><strong>(disziplinäre Ebene)</strong></em
+              >. Aber auch kulturelle Vorstellungen darüber wer für die
+              Kinderbetreuung zuständig sein sollte haben Einfluss auf die
+              Erhaltung dieses dominanten Modells
+              <em><strong>(hegemoniale Ebene)</strong></em
+              >. Ebenso spielen individuellen Erfahrungen eine Rolle
+              <em><strong>(zwischenmenschliche Ebene)</strong></em
+              >. Das können zum Beispiel Erfahrungen mit Vorwürfen sein („Wie
+              kannst du deine Interessen deinen Kindern vorziehen?“) oder auch
+              individuelle Bedürfnisse („Ich möchte gerne mehr Zeit mit meinen
+              Kindern verbringen.“)
             </p>
             <p>
               Diese verschiedenen Ebenen sind entscheidend für die Frage wie
@@ -181,7 +193,7 @@ export default {
       "text1 text1"
       "figure figure";
   }
-  .highlighted-text {
+  .highlighted-container {
     margin: 0 !important;
   }
 }
@@ -190,10 +202,12 @@ export default {
   font-weight: 400;
   font-style: italic;
   line-height: 1.8;
+}
+.highlighted-container {
   margin: 2rem 5rem;
   text-align: center;
 }
-strong{
+strong {
   font-weight: 400;
 }
 </style>

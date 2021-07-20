@@ -9,6 +9,8 @@ import BaseRadio from './components/ui/BaseRadio.vue';
 import SimpleRadio from './components/ui/SimpleRadio.vue';
 import Banner from './components/ui/Banner.vue'
 import InnerWrapper from './components/ui/InnerWrapper.vue'
+import Steps from './components/ui/Steps.vue'
+
 
 import App from './App.vue';
 
@@ -30,5 +32,6 @@ app.component('base-radio', BaseRadio);
 app.component('simple-radio', SimpleRadio);
 app.component('banner', Banner);
 app.component('inner-wrapper', InnerWrapper);
+app.component('steps', Steps);
 
 app.mount('#app');

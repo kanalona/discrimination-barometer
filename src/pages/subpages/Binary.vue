@@ -6,7 +6,7 @@
           <p class="font-big">
             Die Annahme, dass es nur zwei Geschlechter gibt und dass jede Person
             das eine oder andere Geschlecht hat, wird „Zweigeschlechtlichkeit“
-            genannt.
+            genannt.<sup class="font-small"><a href="#source1">1</a></sup>
           </p>
         </div>
         <div class="item2">
@@ -82,10 +82,14 @@
             Diese Reproduktion von Zweigeschlechtlichkeit ist gegen die
             Entscheidung vom Verfassungsgerichtshof Österreich vom 15. Juni
             2018, in dem es heißt, dass auch Geschlechtsidentitäten, über
-            ‚männlich‘ und ‚weiblich‘ hinaus, anerkannt werden müssen. Dass es
-            keine Daten zu einem dritten Geschlechtseintrag gibt, hängt auch
-            damit zusammen, dass die Berechnung auf den Jahren 2015 und 2016
-            basiert, also bevor der dritte Geschlechtseintrag entschieden wurde.
+            ‚männlich‘ und ‚weiblich‘ hinaus, anerkannt werden müssen.<sup
+              class="font-small"
+              ><a href="#source2">2</a></sup
+            >
+            Dass es keine Daten zu einem dritten Geschlechtseintrag gibt, hängt
+            auch damit zusammen, dass die Berechnung auf den Jahren 2015 und
+            2016 basiert, also bevor der dritte Geschlechtseintrag entschieden
+            wurde.
           </p>
         </div>
       </div>
@@ -110,6 +114,23 @@
             ungenauer sind.
           </p>
         </div>
+      </div>
+      <div class="footnote">
+        <p id="source1">
+          <sup>1</sup>
+          Wetterer, A. (2008): Konstruktion von Geschlecht: Reproduktionsweisen
+          der Zweigeschlechtlichkeit. In: Becker, Ruth; Kortendiek, Beate (Hg.)
+          (2010): Handbuch Frauen- und Geschlechterforschung Theorien, Methoden,
+          Empirie. 3.Auflage, Wiesbaden: Springer, S. 126-136
+        </p>
+        <p id="source2">
+          <sup>2</sup>
+          VfGH 15.06.2018, G 77/2018-9, Verfügbar:
+          <a
+            href="https://www.vfgh.gv.at/downloads/VfGH_Entscheidung_G_77-2018_unbestimmtes_Geschlecht_anonym.pdf"
+            >online</a
+          >, (Zugriff: 05.12.2019, 16:40 MEZ).
+        </p>
       </div>
     </div>
   </inner-wrapper>
@@ -151,11 +172,19 @@ export default {
   align-items: center;
   justify-content: center;
 }
+.footnote {
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
 @media (max-width: 800px) {
   .container {
     grid-template-areas:
       "item1 item1"
       "item2 item2";
+  }
+  .footnote {
+    max-width: 100% ;
   }
 }
 ul {
@@ -165,5 +194,9 @@ ul {
 }
 .img-binary {
   width: 100%;
+}
+
+p {
+  margin: 0;
 }
 </style>

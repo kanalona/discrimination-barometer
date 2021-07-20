@@ -37,7 +37,7 @@
               ></donut-chart-canvas>
 
               <div class="footnote-marker">
-                <a href="#source-1">[1]</a>
+                <a href="#source-1">Quelle: 2</a>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
               Nettolohn enthält keine Urlaubs-, Krankheits- oder Feiertage. Die
               hier berechnete Bruttowertschöpfung stellt also eine Untergrenze
               für den Wert unbezahlter Arbeit dar.
-              <a href="#source-1">[1]</a>
+              <sup><a href="#source-1">2</a></sup>
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@
               ></donut-chart-canvas>
             </div>
             <div class="source1 footnote-marker">
-                <a href="#source-1">[1]</a>
+              <a href="#source-1">Quelle: 2</a>
             </div>
 
             <div class="heading2">
@@ -102,9 +102,7 @@
               ></donut-chart-canvas>
             </div>
             <div class="source2 footnote-marker">
-                <a href="#source-1">[1]</a>,
-                <a href="#source-2">[2]</a>
-              
+              <a href="#source-1">Quelle: 2</a> und <a href="#source-2">3</a>
             </div>
 
             <div class="heading3">
@@ -123,22 +121,21 @@
               ></donut-chart-canvas>
             </div>
             <div class="source3 footnote-marker">
-              <a href="#source-2">[2]</a>
+              <a href="#source-2">Quelle: 3</a>
             </div>
             <div class="sources centered">
               <div class="footnote left">
-                <p>Quellen:</p>
                 <p id="source-1">
-                  [1] Schwarz, Norbert (2017): Der Wert der unbezahlten Arbeit:
-                  Das Satelittensystem Haushaltsproduktion, in: Statistisches
-                  Bundesamt (2017): Wie die Zeit vergeht
+                  <sup>2</sup> Schwarz, N. (2017): Der Wert der unbezahlten
+                  Arbeit: Das Satelittensystem Haushaltsproduktion, in:
+                  Statistisches Bundesamt (2017): Wie die Zeit vergeht
                 </p>
                 <p id="source-2">
-                  [2] Statistische Bundesamt (2014): Volkswirtschaftliche
-                  Gesamtrechnung. Inlandsproduktsberechnung,
-                  Vierteljahresergebnisse, 4. Vierteljahr 2013, Wiesbaden
+                  <sup>3</sup> Statistische Bundesamt (2014):
+                  Volkswirtschaftliche Gesamtrechnung.
+                  Inlandsproduktsberechnung, Vierteljahresergebnisse, 4.
+                  Vierteljahr 2013, Wiesbaden
                 </p>
-                <br />
                 <p>Erhebungsort und -zeitpunkt: Deutschland, 2013</p>
               </div>
             </div>
@@ -272,12 +269,6 @@ export default {
       "figure1";
   }
 }
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .infobox-grid-container {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -294,7 +285,7 @@ img {
   margin: 20px 10px 20px 0;
 }
 .footnote {
-  max-width: 80%;
   margin-top: 10px;
+  align-self: center;
 }
 </style>

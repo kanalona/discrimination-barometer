@@ -237,22 +237,35 @@ p {
   border-top: 1px solid #ccc;
   padding-top: 10px;
 }
-.footnote,
-.footnote-marker,
+.footnote-marker {
+  color: #131313;
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+}
 .footnote p {
   color: #131313;
   font-style: italic;
   font-size: 0.8rem;
   line-height: 1.5;
+  text-align: left;
+  margin: 0.1rem 0;
 }
 .footnote p {
   margin: 0;
 }
-sup {
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* sup {
   vertical-align: top;
   position: relative;
   top: -0.5em;
-}
+} */
 
 .font-light {
   font-weight: 300;

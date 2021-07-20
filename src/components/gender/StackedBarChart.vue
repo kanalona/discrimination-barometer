@@ -32,10 +32,10 @@
         also keine Daten über nicht-binäre Personen erhoben.
       </p>
       <p>
-        Quelle: Statistisches Bundesamt (2015): Wie die Zeit vergeht. Ergebnisse
-        zur Zeitverwendung in Deutschland 2012/2013, Wiesbaden
+        Quelle: Statistisches Bundesamt (2015): Wie die Zeit
+        vergeht. Ergebnisse zur Zeitverwendung in Deutschland 2012/2013,
+        Wiesbaden
       </p>
-      <br />
       <p>Erhebungsort und -zeitpunkt: Deutschland, 2013</p>
     </section>
   </div>
@@ -115,6 +115,6 @@ export default {
 }
 .footnote {
   max-width: 80%;
-  align-self: center;
+  margin: auto;
 }
 </style>
