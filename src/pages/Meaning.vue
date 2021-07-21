@@ -51,11 +51,11 @@ export default {
       tabLinks: [
         {
           name: "Zwei Geschlechter?",
-          link: "/kontext/zwei-geschlechter",
+          link: "/kontext/zwei-geschlechter#context",
         },
         {
           name: "Betreuungspflichten",
-          link: "/kontext/betreuungspflichten",
+          link: "/kontext/betreuungspflichten#context",
         }
       ],
     };

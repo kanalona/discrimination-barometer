@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" :style="{ backgroundColor: backgroundColor }">
+  <div class="banner" :style="{ backgroundColor: backgroundColor}">
     <inner-wrapper>
       <slot></slot>
       <slot name="description">
@@ -30,6 +30,11 @@ export default {
       default: "#131313",
       required: false,
     },
+    imageUrl: {
+      type: String,
+      default: '',
+      required: false
+    }
   },
 };
 </script>
@@ -42,6 +47,8 @@ export default {
   background: #fff;
   height: 100vh;
   color: #f1f1f1;
+   background-position: right bottom;
+ /* background-color: #cccccc; */
 }
 .container {
   display: grid;
