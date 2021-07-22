@@ -1,7 +1,7 @@
 <template>
   <div>
     <banner>
-      <div class="centered">
+      <div class="intro-quote centered">
         <p class="highlight">
           Vorhersagealgorithmen sind oft genauso gut darin zu diskriminieren wie
           es die Gesellschaft davor schon war. Die Algorithmen zeigen die
@@ -112,6 +112,9 @@ export default {
 </script>
 
 <style scoped>
+.intro-quote {
+  margin: auto;
+}
 .background-wrapper {
   padding: 3rem 0 0 0;
 }
@@ -120,7 +123,6 @@ export default {
   grid-gap: 30px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "heading heading"
     "summary1 content1"
     "summary2 content2";
 }
@@ -131,6 +133,26 @@ export default {
   grid-template-areas:
     "heading content"
     "steps steps";
+}
+@media (max-width: 800px) {
+  .intro-quote p {
+    font-size: 2rem;
+  }
+  .ams-algorithm {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "summary1"
+      "content1"
+      "summary2"
+      "content2";
+  }
+  .discrimination-barometer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heading"
+      "content"
+      "steps";
+  }
 }
 .heading {
   grid-area: heading;
