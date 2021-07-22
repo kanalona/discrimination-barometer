@@ -2,6 +2,7 @@
   <div class="background-wrapper">
     <div class="background-child">
       <inner-wrapper>
+        <h1 class="left">{{'Betreuungspflichten'.toUpperCase()}}</h1>
         <div class="unequal-work left">
           <div class="summary1">
             <p class="font-big nomargin">

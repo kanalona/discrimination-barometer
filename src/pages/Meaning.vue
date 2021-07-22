@@ -18,13 +18,20 @@
           mode="flat"
           primaryColor="#ffffff"
           secondaryColor="#ff7b00"
-          to="#context"
-          >&rarr; Zu den Beispielen</base-button
+          to="/kontext/zwei-geschlechter#context"
+          >&rarr; Zweigeschlechtlichkeit</base-button
+        >
+        <base-button
+          link
+          mode="flat"
+          primaryColor="#ffffff"
+          secondaryColor="#ff7b00"
+          to="/kontext/betreuungspflichten#context"
+          >&rarr; Betreuungspflichten</base-button
         >
       </template>
     </banner>
     <div id="context">
-      <tabs :tabs="tabLinks"></tabs>
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
