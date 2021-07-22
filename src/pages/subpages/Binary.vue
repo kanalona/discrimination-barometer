@@ -127,6 +127,13 @@
         </div>
       </inner-wrapper>
     </div>
+    <div class="background-child">
+      <next-prev
+        :next="true"
+        text="(Beispiel Betreuungspflichten)"
+        :link="'/kontext/betreuungspflichten#context'"
+      ></next-prev>
+    </div>
   </div>
 </template>
 
