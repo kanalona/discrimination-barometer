@@ -14,6 +14,7 @@
       </template>
       <template #button>
         <base-button
+          tab
           link
           mode="flat"
           primaryColor="#ffffff"
@@ -22,6 +23,7 @@
           >&rarr; Zweigeschlechtlichkeit</base-button
         >
         <base-button
+          tab
           link
           mode="flat"
           primaryColor="#ffffff"
@@ -63,7 +65,7 @@ export default {
         {
           name: "Betreuungspflichten",
           link: "/kontext/betreuungspflichten",
-        }
+        },
       ],
     };
   },

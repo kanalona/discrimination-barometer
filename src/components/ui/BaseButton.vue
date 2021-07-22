@@ -10,6 +10,7 @@
   </button>
   <router-link
     v-else
+    :class="{tab: tab}"
     :to="to"
     :style="setStyle"
     :disabled="disabled"
@@ -29,6 +30,11 @@ export default {
       default: null,
     },
     link: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    tab: {
       type: Boolean,
       required: false,
       default: false,
@@ -163,5 +169,9 @@ button:hover {
 button:disabled {
   opacity: 0.4;
   cursor: default;
+}
+a.tab.router-link-active {
+  color: #ff7b00 !important;
+  border-color: #ff7b00 !important;
 }
 </style>

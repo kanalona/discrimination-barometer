@@ -65,11 +65,9 @@ ul {
   justify-content: center;
   align-items: center;
 }
-
 li {
   margin: 0 0.5rem;
 }
-
 .sticky {
   position: fixed;
 }
