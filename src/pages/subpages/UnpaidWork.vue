@@ -2,6 +2,7 @@
   <div class="background-wrapper">
     <div class="background-child">
       <inner-wrapper>
+        <h1 class="left">{{ "Betreuungspflichten".toUpperCase() }}</h1>
         <div class="unequal-work left">
           <div class="summary1">
             <p class="font-big nomargin">
@@ -59,8 +60,8 @@
               </p>
               <div class="footnote">
                 <p>
-                  <sup>1</sup> Kleven, H.; Landais, C.; Søgaard, J.
-                  (2019): Children and Gender Inequality: Evidence from Denmark,
+                  <sup>1</sup> Kleven, H.; Landais, C.; Søgaard, J. (2019):
+                  Children and Gender Inequality: Evidence from Denmark,
                   American Economic Jourcal: Applied Economics, 11(4): 181-209
                 </p>
               </div>
@@ -115,6 +116,13 @@
     </div>
     <div class="background-child">
       <inner-wrapper> <donut-chart></donut-chart> </inner-wrapper>
+    </div>
+    <div class="background-child">
+      <next-prev
+        :previous="true"
+        text="(Beispiel Zweigeschlechtlichkeit)"
+        :link="'/kontext/zwei-geschlechter#context'"
+      ></next-prev>
     </div>
   </div>
 </template>

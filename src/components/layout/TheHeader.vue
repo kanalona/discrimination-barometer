@@ -2,7 +2,7 @@
   <header ref="header" :class="{ sticky: isSticky }">
     <nav>
       <h3><router-link to="/">{{"Home".toUpperCase()}}</router-link></h3>
-      <ul>
+      <ul class="navigation-tabs">
         <li>
           <router-link to="/barometer">{{
             "1. Barometer".toUpperCase()
@@ -97,14 +97,15 @@ li {
 h3 {
   margin: 0;
 }
-
-
 a {
   position: relative;
   /* text-decoration: none; */
   /* color: #646464; */
   display: inline-block;
   padding: 0.75rem 1.5rem;
+}
+.navigation-tabs > * {
+  font-weight: 400;
 }
 
 /* a:hover,
