@@ -10,7 +10,7 @@ const Binary = () => import('./pages/subpages/Binary.vue');
 const UnpaidWork = () => import('./pages/subpages/UnpaidWork.vue');
 
 const router = createRouter({
-  // mode: 'history',
+  mode: 'history',
   history: createWebHistory(),
   scrollBehavior: function (to, from, savedPosition) {
     if (to.hash) {
