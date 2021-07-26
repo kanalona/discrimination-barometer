@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- <top-container></top-container> -->
-    <the-header @set-sticky="addPadding"></the-header>
-    <div :style="{ paddingTop: padding }">
+    <the-navbar></the-navbar>
+    <div>
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -13,11 +12,11 @@
 </template>
 
 <script>
-import TheHeader from "./components/layout/TheHeader.vue";
+import TheNavbar from "./components/layout/TheNavbar.vue";
 import TopContainer from "./components/layout/TopContainer.vue";
 export default {
   components: {
-    TheHeader,
+    TheNavbar,
     TopContainer,
   },
   data() {
@@ -227,7 +226,7 @@ p {
   color: #aaa;
 }
 
-.border-bottom  {
+.border-bottom {
   border-bottom: 1px solid #ccc;
 }
 .padding-bottom {
