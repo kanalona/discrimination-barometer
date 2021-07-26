@@ -19,7 +19,7 @@
           @change="changeOption"
         ></simple-radio>
       </div>
-      <p class="font-small font-light nomargin">
+      <p class="font-small grey nomargin">
         Um mehr Informationen zu erhalten klicke unten auf die entsprechende
         Kategorie.&cudarrr;
       </p>

@@ -8,7 +8,7 @@
         class="icon clickable"
         @click="toggleDescription"
       />
-      <p v-show="showDescription">
+      <p v-show="showDescription" class="font-small darkgrey">
         {{ criterium.description }}
       </p>
     </div>
@@ -77,7 +77,8 @@ export default {
   mounted() {
     if (this.hasTooltip && this.disabled) {
       this.setUpTippy();
-    } else if (this.criterium) { //this.criterium löschen?
+    } else if (this.criterium) {
+      //this.criterium löschen?
       this.setUpTippyDivers();
     }
   },
@@ -114,7 +115,10 @@ export default {
   methods: {
     hasDescription(criterium) {
       //don't show description for betreuung because it is already shown in tooltip
-      return (criterium.description != null) && (criterium.label != "Betreuungspflichten");
+      return (
+        criterium.description != null &&
+        criterium.label != "Betreuungspflichten"
+      );
     },
     toggleDescription() {
       this.showDescription = !this.showDescription;
@@ -180,14 +184,10 @@ li:not(:last-of-type) {
   margin: 10px auto;
   padding: 5px;
 }
-.description p {
-  font-size: 0.8rem;
-  color: rgb(139, 139, 139);
-}
 .map {
   display: block;
   width: 100%;
-  height:auto;
+  height: auto;
   /* max-width: 1000px; */
 }
 </style>

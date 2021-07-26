@@ -14,7 +14,7 @@
         Wenn Sie fertig sind können Sie hier mehr zu diesen zwei fiktiven
         Personen zu erfahren:
         <a
-          class="more-less-btn font-light"
+          class="more-less-btn grey font-regular"
           href="#personas"
           @click="toggleMore()"
           >{{ MoreLessText }}</a
@@ -81,9 +81,9 @@ export default {
   computed: {
     MoreLessText() {
       if (this.showMore === true) {
-        return "Weniger";
+        return "⮟ Lösung verbergen";
       } else {
-        return "Mehr";
+        return "⮞ Lösung anzeigen"
       }
     },
   },

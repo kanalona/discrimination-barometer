@@ -222,10 +222,12 @@ p {
 .italic {
   font-style: italic;
 }
-.font-light {
-  color: #aaa;
+.darkgrey {
+  color: #555;
 }
-
+.grey {
+  color: #888;
+}
 .border-bottom {
   border-bottom: 1px solid #ccc;
 }
@@ -237,14 +239,14 @@ p {
   padding-top: 10px;
 }
 .footnote-marker {
-  color: #131313;
+  color: #555;
   font-style: italic;
   font-size: 0.8rem;
   line-height: 1.5;
   text-align: center;
 }
 .footnote p {
-  color: #131313;
+  color: #555;
   font-style: italic;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -311,13 +313,6 @@ p {
   background-color: rgb(250, 250, 250);
   /* background-color: rgba(250, 250, 250, 0.74); */
 }
-.grey {
-  background-color: #f1f1f1;
-}
-.white {
-  background-color: white;
-}
-
 /* ==== GRID SYSTEM ==== */
 
 .containerr {

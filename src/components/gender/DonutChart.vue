@@ -59,7 +59,7 @@
               alt="icon for information"
               class="icon"
             />
-            <p class="font-small italic justify">
+            <p class="font-small darkgrey italic justify">
               Um den wirtschaftlichen Wert unbezahlter Arbeit zu schätzen, wird
               ein fiktiver Nettostundenlohn von 9.25€ herangezogen. Dieser
               Nettolohn enthält keine Urlaubs-, Krankheits- oder Feiertage. Die

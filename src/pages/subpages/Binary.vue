@@ -163,7 +163,6 @@ export default {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "item1 item2";
 }
-
 .item1 {
   grid-area: item1;
 }
@@ -178,9 +177,7 @@ export default {
   justify-content: center;
 }
 .footnote {
-  max-width: 80%;
-  margin: auto;
-  padding-bottom: 2rem;
+  margin-top: 2rem;
 }
 @media (max-width: 800px) {
   .container {

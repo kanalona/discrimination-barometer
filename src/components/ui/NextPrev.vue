@@ -2,12 +2,12 @@
   <inner-wrapper>
     <div class="flex-container">
       <div v-if="previous" class="previous">
-        <router-link class="link" :to="link">
+        <router-link class="link grey" :to="link">
           <span class="arrow">&larr;</span> Zurück {{ text }}</router-link
         >
       </div>
       <div v-else-if="next" class="next">
-        <router-link class="link" :to="link"
+        <router-link class="link grey" :to="link"
           >Weiter {{ text }} <span class="arrow">&rarr;</span></router-link
         >
       </div>
@@ -49,9 +49,9 @@ export default {
   justify-content: flex-end;
   width: 100%;
 }
-.link {
+/* .link {
   color: #888;
-}
+} */
 .link:hover {
   color: #ff7b00;
 }
