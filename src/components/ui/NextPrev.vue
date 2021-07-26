@@ -1,13 +1,19 @@
 <template>
-  <div class="flex-container">
-    <div v-if="previous" class="previous">
-      <router-link class="link" :to="link">&larr; ZURÜCK {{ text }}</router-link>
+  <inner-wrapper>
+    <div class="flex-container">
+      <div v-if="previous" class="previous">
+        <router-link class="link" :to="link">
+          <span class="arrow">&larr;</span> Zurück {{ text }}</router-link
+        >
+      </div>
+      <div v-else-if="next" class="next">
+        <router-link class="link" :to="link"
+          >Weiter {{ text }} <span class="arrow">&rarr;</span></router-link
+        >
+      </div>
+      <div v-else></div>
     </div>
-    <div v-else-if="next" class="next">
-      <router-link class="link" :to="link">WEITER {{ text }} &rarr;</router-link>
-    </div>
-    <div v-else></div>
-  </div>
+  </inner-wrapper>
 </template>
 
 <script>
@@ -15,12 +21,12 @@ export default {
   props: {
     text: {
       type: String,
-      default: '',
+      default: "",
       required: false,
     },
     link: {
       type: String,
-      default: '',
+      default: "",
       required: false,
     },
     previous: {
@@ -40,19 +46,19 @@ export default {
 <style scoped>
 .flex-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 100%;
 }
 .link {
-    color:#888;
+  color: #888;
 }
 .link:hover {
-    color: #ff7b00;
+  color: #ff7b00;
 }
-/* .previous {
-  align-self: flex-start;
+.previous {
+  margin-right: auto;
 }
-.next {
-  align-self: flex-end;
-} */
+.arrow {
+  font-size: 2rem;
+}
 </style>
