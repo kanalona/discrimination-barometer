@@ -45,12 +45,11 @@
             :key="'attr-group-' + attribute.text"
             :class="'attr-group-' + attribute.text"
             :transform="translate(xTranslateGroup(index), 0)"
-            :fill="setColor(category.label)"
           >
             <g
               class="attr-details"
               v-if="isSelected(category.label) || isBaseGroup(attribute.value)"
-              :fill="baseView ? '#ff7b00' : null"
+              :fill="baseView ? '#ff7b00' : setColor(category.label)"
             >
               <text
                 class="attr-label"
@@ -85,6 +84,7 @@
               :class="'attr-short-label-' + attribute.text"
               :x="xPositionAttrLabels"
               :y="onBarPosition(attribute.value)"
+              :fill="setColor(category.label)"
             >
               {{ attribute.shorttext }}
             </text>
@@ -93,6 +93,7 @@
               :y="yPositionRect(attribute.value)"
               :width="widthRect"
               :height="heightRect(attribute.value)"
+              :fill="setHoverableColor(category.label)"
             ></rect>
           </g>
         </g>
@@ -277,6 +278,14 @@ export default {
       if (this.baseView === true) {
         return this.hexToRgb(this.color(category), 0.3);
       }
+      else {
+        return this.color(category);
+      }
+    },
+    setHoverableColor(category) {
+      if (this.baseView === true) {
+        return this.hexToRgb(this.color(category), 0.3);
+      }
       if (
         this.hoveredCategory === category ||
         this.selectedCategory === category
@@ -372,14 +381,6 @@ export default {
 .map {
   margin: 20px 0;
 }
-/* .button-group {
-  display: inline-flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  overflow: hidden;
-  margin: 10px;
-} */
-
 .button-group{
   display:grid;
   grid-template-columns: repeat(6, 1fr);
@@ -403,13 +404,10 @@ export default {
   font-size: 0.8rem;
   color: rgb(139, 139, 139);
 }
-
 .svg-container {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
-  /* max-width: 1000px; */
-  /* padding-bottom: 5rem; */
   vertical-align: top;
   overflow: hidden;
   margin: 10px;
