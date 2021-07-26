@@ -16,13 +16,13 @@
     <chart-axis
       class="right-axis"
       :class="'transparent'"
-      :transform="translate(500, margin.top)"
+      :transform="translate(x(minTotal), margin.top)"
       :orient="rightAxis.orient"
       :scale="rightAxis.scale"
       :range="rightAxis.range"
       :domain="rightAxis.domain"
       :numberOfTicks="rightAxis.ticks"
-      :tickSize="160"
+      :tickSize="220"
       :width="width"
       :height="height"
     ></chart-axis>
@@ -49,8 +49,8 @@
           ></rect>
           <text
             class="value-label"
-            :x="index * 390 + 10"
-            :y="y(item.data.gender) + (3 * y.bandwidth()) / 4"
+            :x="index * 460 + 10"
+            :y="y(item.data.gender) + (3 * y.bandwidth()) / 4.5"
             :fill="'black'"
           >
             {{
@@ -63,19 +63,19 @@
       </g>
     </g>
 
-    <g class="legend">
+    <!-- <g class="legend" :transform="translate(margin.left, svgHeight - margin.bottom + 20)">
       <g
         v-for="(series, index) in stackedSeries"
         :key="series.key"
         :class="'legend-' + series.key"
-        :transform="translate(svgWidth - 150, index * 25 + margin.top)"
+        :transform="translate(index *150, 0)"
       >
         <rect :width="20" :height="20" :fill="color(series.key)"></rect>
         <text :x="25" :y="9.5" :dy="'0.32em'">
           {{ showLegend(series.key) }}
         </text>
       </g>
-    </g>
+    </g> -->
   </svg>
 </template>
 
@@ -93,11 +93,11 @@ export default {
   },
   data() {
     return {
-      margin: { top: 20, right: 250, bottom: 20, left: 70 },
+      margin: { top: 20, right: 90, bottom: 20, left: 70 },
       padding: 0.08,
     };
   },
-  props: ["data", "svgWidth", "svgHeight", "maxRange"],
+  props: ["data", "svgWidth", "svgHeight", "maxTotal", "minTotal"],
   mounted() {
     this.transition();
   },
@@ -127,7 +127,7 @@ export default {
         .padding(this.padding);
     },
     x() {
-      return scaleLinear().domain([0, this.maxRange]).range([0, this.width]);
+      return scaleLinear().domain([0, this.maxTotal]).range([0, this.width]);
     },
     leftAxis() {
       return {
