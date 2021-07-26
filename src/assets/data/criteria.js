@@ -55,26 +55,6 @@ export default {
       }
     ]
   },
-  staat: {
-    label: 'Staatsangehörigkeit',
-    options: [
-      {
-        shorttext: 'Österreich',
-        text: 'Österreich',
-        value: 0,
-      },
-      {
-        shorttext: 'EU',
-        text: 'andere EU-Staaten',
-        value: 0.16,
-      },
-      {
-        shorttext: 'Drittstaaten',
-        text: 'Drittstaaten',
-        value: -0.05,
-      },
-    ]
-  },
   gesundheit: {
     label: 'Gesundheitliche Beeinträchtigung',
     options: [
@@ -110,8 +90,28 @@ export default {
       },
     ]
   },
+  staat: {
+    label: 'Staatsangehörigkeit',
+    options: [
+      {
+        shorttext: 'Österreich',
+        text: 'Österreich',
+        value: 0,
+      },
+      {
+        shorttext: 'EU',
+        text: 'andere EU-Staaten',
+        value: 0.16,
+      },
+      {
+        shorttext: 'Drittstaaten',
+        text: 'Drittstaaten',
+        value: -0.05,
+      },
+    ]
+  },
   wohnort: {
-    label: 'Regionales Arbeitsmarktgeschehen',
+    label: 'Wohnort (Regionales Arbeitsmarktgeschehen)',
     description: "Das regionale Arbeitsmarktgeschehen wird auf Basis des Wohnbezirks berechnet. Unten finden Sie eine Übersicht der Zuordnung der einzelnen Bezirke zu den verschiedenen Regionen.",
     options: [
       {
@@ -198,21 +198,6 @@ export default {
       }
     ]
   },
-  gfDauer: {
-    label: 'Längste Dauer einer früheren Betreuung',
-    options: [
-      {
-        shorttext: '<180 Tage',
-        text: 'unter 180 Tage',
-        value: 0,
-      },
-      {
-        shorttext: '>180 Tage',
-        text: '180 Tage oder mehr',
-        value: -0.8,
-      }
-    ]
-  },
   massnahmen: {
     label: 'Teilnahme an AMS-Maßnahmen (die letzte zutreffende auswählen)',
     options: [
@@ -227,7 +212,7 @@ export default {
         value: -0.57,
       },
       {
-        shorttext: 'qualifizir.',
+        shorttext: 'qualifiz.',
         text: 'qualifizierende Maßnahme',
         value: -0.21,
       },
@@ -235,6 +220,21 @@ export default {
         shorttext: 'fördernd',
         text: 'Beschäftigungsförderungs-Maßnahme',
         value: -0.43,
+      }
+    ]
+  },
+  gfDauer: {
+    label: 'Längste Dauer einer früheren Betreuung',
+    options: [
+      {
+        shorttext: '<180 Tage',
+        text: 'unter 180 Tage',
+        value: 0,
+      },
+      {
+        shorttext: '>180 Tage',
+        text: '180 Tage oder mehr',
+        value: -0.8,
       }
     ]
   },

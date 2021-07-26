@@ -123,7 +123,6 @@
 import ChartAxis from "./ChartAxis.vue";
 import { scaleLinear, scaleBand, scaleOrdinal } from "d3-scale";
 import { max, min } from "d3-array";
-// import { transition } from "d3-transition";
 
 export default {
   components: {
@@ -161,7 +160,7 @@ export default {
   },
   data() {
     return {
-      margin: { top: 20, right: 150, bottom: 20, left: 60 },
+      margin: { top: 30, right: 125, bottom: 20, left: 60 },
       barPadding: 10,
       selectedCategory: null,
       hoveredCategory: null,
