@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <label>
+    <label :style="setActive">
       <input
         type="radio"
         :name="name"
@@ -45,6 +45,13 @@ export default {
       type: Boolean,
     },
   },
+  data() {
+    return {
+      activeClass: {
+        backgroundColor: '#f1f1f1',
+      },
+    };
+  },
   computed: {
     selectedValue: {
       get() {
@@ -55,13 +62,18 @@ export default {
         this.$emit("save");
       },
     },
+    setActive() {
+      if (this.value === this.selectedValue) {
+        return this.activeClass;
+      } else {
+        return null;
+      }
+    },
   },
 };
 </script>
 
-
-
- <style scoped>
+<style scoped>
 label {
   display: inline-block;
   padding: 0.5rem;
@@ -72,17 +84,14 @@ label {
   color: #131313;
   cursor: pointer;
   transition: all 0.4s;
-}
-
-label:hover {
-  background-color: #f1f1f1;
   border-radius: 99em;
 }
-
+label:hover {
+  background-color: #f1f1f1;
+}
 input {
   cursor: pointer;
 }
-
 input:disabled + label {
   opacity: 0.4;
   cursor: default;

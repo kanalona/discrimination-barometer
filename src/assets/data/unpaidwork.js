@@ -1,6 +1,6 @@
 export default {
   nokids: {
-    label: 'Alleinlebene und Paare OHNE Kind',
+    label: 'Alleinlebene und Paare ohne Kind',
     entries: [
       {
         gender: 'Männer',
@@ -15,7 +15,7 @@ export default {
     ]
   },
   withkids: {
-    label: 'Alleinerziehende und Paare MIT Kind(ern)',
+    label: 'Alleinerziehende und Paare mit Kind(ern)',
     entries: [
       {
         gender: 'Männer',
