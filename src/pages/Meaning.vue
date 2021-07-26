@@ -20,7 +20,7 @@
           primaryColor="#ffffff"
           secondaryColor="#ff7b00"
           to="/kontext/zwei-geschlechter#context"
-          >&rarr; Zweigeschlechtlichkeit</base-button
+          >Zweigeschlechtlichkeit &rarr;</base-button
         >
         <base-button
           tab
@@ -29,7 +29,7 @@
           primaryColor="#ffffff"
           secondaryColor="#ff7b00"
           to="/kontext/betreuungspflichten#context"
-          >&rarr; Betreuungspflichten</base-button
+          >Betreuungspflichten &rarr;</base-button
         >
       </template>
     </banner>

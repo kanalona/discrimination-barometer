@@ -19,7 +19,7 @@
           primaryColor="#ffffff"
           secondaryColor="#ff7b00"
           to="#barcharts"
-          >&rarr; Zu den Grafiken</base-button
+          >Zu den Grafiken &rarr;</base-button
         >
       </template>
       <template #more-content>

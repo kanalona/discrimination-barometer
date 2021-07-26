@@ -18,7 +18,7 @@
           primaryColor="#ffffff"
           secondaryColor="#ff7b00"
           to="#barometer"
-          >&rarr; Probier es aus!</base-button
+          >Barometer &rarr;</base-button
         >
       </template>
       <template #more-content>
