@@ -35,6 +35,16 @@ export default {
       headerHeight: 0,
     };
   },
+  mounted() {
+    this.initialHeaderPos = this.$refs.header.offsetTop;
+    this.headerHeight = this.$refs.header.offsetHeight;
+  },
+   created() {
+    window.addEventListener("scroll", this.setSticky);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.setSticky);
+  },
   methods: {
     setSticky() {
       if (window.scrollY > this.initialHeaderPos) {
@@ -47,29 +57,16 @@ export default {
       this.$emit("set-sticky", this.isSticky, this.headerHeight);
     },
   },
-  created() {
-    window.addEventListener("scroll", this.setSticky);
-  },
-  mounted() {
-    this.initialHeaderPos = this.$refs.header.offsetTop;
-    this.headerHeight = this.$refs.header.offsetHeight;
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.setSticky);
-  },
 };
 </script>
 
 
 <style scoped>
 header {
-  padding: 10px 16px;
-  margin: 0rem 0rem;
-  /* background: #f2685d; */
+  padding: 10px;
   background: #f1f1f1;
   border: 1px solid #ccc;
   width: 100%;
-  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +75,7 @@ header {
 nav {
   width: 90%;
   margin: auto;
-  /* max-width: 50rem; */
+  max-width: 65rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,15 +96,15 @@ h3 {
 }
 a {
   position: relative;
-  /* text-decoration: none; */
-  /* color: #646464; */
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0rem 1rem;
 }
 .navigation-tabs > * {
   font-weight: 400;
 }
-
+.sticky {
+  position: fixed;
+}
 /* a:hover,
 a:active,
 a.router-link-active {
@@ -136,10 +133,4 @@ a:active,
 a.router-link-active {
   border-bottom: 2px solid #ff7b00;
 } */
-
-
-
-.sticky {
-  position: fixed;
-}
 </style>

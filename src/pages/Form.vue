@@ -131,7 +131,7 @@ export default {
 .form-parent-container {
   display: grid;
   grid-gap: 30px;
-  padding: 30px 0 10rem 0;
+  padding: 3rem 0 10rem 0;
   /* bottom padding fo sticky result bar */
 }
 ul {
