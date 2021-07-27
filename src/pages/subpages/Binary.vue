@@ -16,22 +16,20 @@
             </div>
             <div class="item2">
               <p>
-                Bei dem Merkmal ‚Geschlecht‘ kann im Diskriminierungs-Barometer
-                zwischen ‚männlich‘ und ‚weiblich‘ ausgewählt werden. Die
+                Bei dem Merkmal Geschlecht kann im Diskriminierungs-Barometer
+                zwischen „männlich“ und „weiblich“ ausgewählt werden. Die
                 Auswahl eines dritten Geschlechts wie „divers, inter, offen oder
                 kein Eintrag“ ist nicht möglich. Hier wird also
                 Zweigeschlechtlichkeit reproduziert.
               </p>
             </div>
-          </div>
-          <div class="container left">
-            <div class="item1">
+            <div class="item3">
               <p class="font-big">
                 Das Diskriminierungs-Barometer zeigt die Unsichtbarmachung von
-                Geschlechtern die nicht männlich oder weiblich sind.
+                Geschlechtern die nicht „männlich“ oder „weiblich“ sind.
               </p>
             </div>
-            <div class="item2">
+            <div class="item4">
               <p>
                 Der Ausschluss und die Diskriminierung von nicht-binären
                 Menschen, intersexuellen Menschen und trans*Personen ist
@@ -64,7 +62,7 @@
             <div class="item1">
               <p class="font-big">
                 Die fehlenden Daten zum dritten Geschlecht spiegeln die
-                Rechtslage vor 2018, als nur ‚männlich‘ und ‚weiblich‘ als
+                Rechtslage vor 2018, als nur „männlich“ und „weiblich“ als
                 Geschlechter anerkannt waren.
               </p>
             </div>
@@ -73,27 +71,24 @@
                 Diese Reproduktion von Zweigeschlechtlichkeit ist gegen die
                 Entscheidung vom Verfassungsgerichtshof Österreich vom 15. Juni
                 2018, in dem es heißt, dass auch Geschlechtsidentitäten, über
-                ‚männlich‘ und ‚weiblich‘ hinaus, anerkannt werden müssen.<sup
+                „männlich“ und „weiblich“ hinaus, anerkannt werden müssen.<sup
                   class="font-small"
                   ><a href="#source2">2</a></sup
                 >
-                Dass es keine Daten zu einem dritten Geschlechtseintrag gibt,
-                hängt auch damit zusammen, dass die Berechnung auf den Jahren
-                2015 und 2016 basiert, also bevor der dritte Geschlechtseintrag
+                Dass es keine Daten zum dritten Geschlechtseintrag gibt, hängt
+                auch damit zusammen, dass die Berechnung auf den Jahren 2015 und
+                2016 basiert, also bevor der dritte Geschlechtseintrag
                 entschieden wurde.
               </p>
             </div>
-          </div>
-
-          <div class="container left">
-            <div class="item1">
+            <div class="item3">
               <p class="font-big">
                 Nicht-binäre Personen sind häufiger von Falschzuordnung
                 betroffen, da statistische Berechnungen mit wenigen Daten nicht
                 so gut funktionieren.
               </p>
             </div>
-            <div class="item2">
+            <div class="item4">
               <p>
                 Auch mit der Einführung des dritten Geschlechtseintrags sind
                 Datenerhebungen mit mehr als zwei Geschlechtern selten – und
@@ -105,6 +100,7 @@
                 ungenauer sind.
               </p>
             </div>
+          </div>
           </div>
           <div class="footnote">
             <p id="source1">
@@ -124,7 +120,7 @@
               >, (Zugriff: 05.12.2019, 16:40 MEZ).
             </p>
           </div>
-        </div>
+        
       </inner-wrapper>
     </div>
     <div class="background-child">
@@ -155,19 +151,27 @@ export default {
 <style scoped>
 .parent-container {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 .container {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 30px;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "item1 item2";
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4";
 }
 .item1 {
   grid-area: item1;
 }
 .item2 {
   grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
 }
 .centered {
   display: flex;
@@ -183,7 +187,9 @@ export default {
   .container {
     grid-template-areas:
       "item1 item1"
-      "item2 item2";
+      "item2 item2"
+      "item3 item3"
+      "item4 item4";
   }
   .footnote {
     max-width: 100%;

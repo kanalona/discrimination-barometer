@@ -103,7 +103,7 @@
             </p>
             <p>
               Diese verschiedenen Ebenen sind entscheidend für die Frage wie
-              Kinderbetreuung in der Gesellschaft organisiert wird. Dieses
+              Kinderbetreuung in der Gesellschaft organisiert wird. Diese
               unterschiedlichen Ebenen von Unterdrückung werden auch MATRIX OF
               DOMINATION genannt.
             </p>

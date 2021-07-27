@@ -8,7 +8,7 @@
         <p class="nomargin font-big">
           In den Pluspunkten und Abzügen, die eine Person für bestimmte Merkmale
           bekommt, wird die mehrfache Diskriminierung sichtbar. Die
-          untenstehenden Grafiken zeigen für welche Merkmale, es Plus- und
+          untenstehenden Grafiken zeigen für welche Merkmale es Plus- und
           Minus-Prozente gibt.
         </p>
       </template>
@@ -27,7 +27,7 @@
           Für die Berechnung der Chancen auf dem Arbeitsmarkt werden zwei
           verschiedene Arten von Daten benutzt: Persönliche Merkmale und
           Merkmale zur Vorkarriere, diese enthalten den Erwerbsverlauf und
-          vergangene AMS-Geschäftsfälle. Außerdem gibt es für die Berechnung
+          vergangene AMS-Betreuungen. Außerdem gibt es für die Berechnung
           noch eine sogenannte Basisgruppe. Diese ist unteranderem männlich,
           unter 30 Jahre, Österreicher, hat höchstens einen
           Pflichtschulabschluss, keine Betreuungspflichten und keine

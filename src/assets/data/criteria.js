@@ -173,27 +173,27 @@ export default {
     ]
   },
   gfAnzahl: {
-    label: 'Jahre mit AMS-Geschäftsfällen',
+    label: 'Jahre mit AMS Betreuung',
     description: 'Anzahl der Jahre (in den letzen vier Jahren) in der eine Betreuung des AMS stattgefunden hat. (pro Jahr mindestens 1 Geschäftsfall)',
     options: [
       {
         shorttext: 'keines',
-        text: 'in keinem',
+        text: 'keines',
         value: 0,
       },
       {
         shorttext: 'eins',
-        text: 'in einem',
+        text: 'eines',
         value: 0.65,
       },
       {
         shorttext: 'zwei',
-        text: 'in zwei',
+        text: 'zwei',
         value: 1.19,
       },
       {
         shorttext: 'drei oder vier',
-        text: 'in drei oder vier',
+        text: 'drei oder vier',
         value: 1.98,
       }
     ]
@@ -224,7 +224,7 @@ export default {
     ]
   },
   gfDauer: {
-    label: 'Längste Dauer einer früheren Betreuung',
+    label: 'Längste Dauer einer früheren Betreuung des AMS',
     options: [
       {
         shorttext: '<180 Tage',

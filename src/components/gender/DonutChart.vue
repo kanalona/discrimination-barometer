@@ -10,7 +10,7 @@
       </div>
       <div class="text1">
         <p class="justify nomargin">
-          Kochen, Waschen, sich sorgen, betreuen, etc. sind überhaupt erst die
+          Kochen, waschen, sich sorgen, betreuen, etc. sind überhaupt erst die
           Voraussetzung dafür, dass wir leben, funktionieren und auch arbeiten
           können. Eine Gesellschaft ohne diese sogenannte „Care-Arbeit“ würde
           gar nicht funktionieren und hat somit einen enormen Wert – auch

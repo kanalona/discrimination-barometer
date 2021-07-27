@@ -45,7 +45,7 @@ export default {
   align-items: center;
   justify-content: center;
   background: #fff;
-  height: 100vh;
+  min-height: 100vh;
   color: #f1f1f1;
    background-position: right bottom;
  /* background-color: #cccccc; */

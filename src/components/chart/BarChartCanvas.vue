@@ -26,7 +26,7 @@
           alt="icon for information"
           class="icon"
         />
-        <p>{{ category.description }}</p>
+        <p class="font-small grey">{{ category.description }}</p>
       </div>
     </div>
 
@@ -400,10 +400,10 @@ export default {
   padding: 5px;
   box-sizing: border-box;
 }
-.infobox p {
+/* .infobox p {
   font-size: 0.8rem;
   color: rgb(139, 139, 139);
-}
+} */
 .svg-container {
   display: inline-flex;
   flex-direction: column;

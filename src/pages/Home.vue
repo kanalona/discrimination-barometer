@@ -46,12 +46,12 @@
             </div>
             <div class="content2">
               <p class="nomargin">
-                Diese Chance berechnet der Algorithmus mit Daten, die das AMS
-                gesammelt hat. Es werden also Daten aus der Vergangenheit
-                genommen um die Zukunft vorherzusagen. Das basiert auf der
-                Annahme, dass die Zukunft der Vergangenheit ähneln wird:
-                Veränderungen also unwahrscheinlich sind. So wird der jetzige
-                Status-Quo erhalten!
+                Die Chance in den Arbeitsmarkt integriert zu werden berechnet
+                der Algorithmus mit Daten, die das AMS gesammelt hat. Es werden
+                also Daten aus der Vergangenheit genommen um die Zukunft
+                vorherzusagen. Das basiert auf der Annahme, dass die Zukunft der
+                Vergangenheit ähneln wird: Veränderungen also unwahrscheinlich
+                sind. So wird der jetzige Status-Quo erhalten!
               </p>
             </div>
           </div>
@@ -65,17 +65,23 @@
               <p>
                 Dabei ist der AMS-Algorithmus gar nicht so gut darin für
                 einzelne Menschen die Zukunft am Arbeitsmarkt vorherzusagen.
-                Aber er spiegelt wieder wie verschiedene Personengruppen in der
-                Vergangenheit am Arbeitsmarkt diskriminiert wurden. Daten und
-                statistische Berechnungen können einen Hinweis geben auf die
-                Verhältnisse am Arbeitsmarkt, aber auch nicht genau. Der
-                AMS-Algorithmus ist also eher wie ein verzerrtes Spiegelbild.
+                Vielmehr berechnet er die Chance für Personengruppen mit
+                gleichen oder ähnlichen Merkmalen. Der AMS-Algorithmus spiegelt
+                also nicht, wie eine einzelne Person
+                <em><strong>individuell</strong></em> diskriminiert wurde,
+                sondern wie verschiedene Personengruppen in der Vergangenheit
+                <em><strong>strukturell</strong></em> am Arbeitsmarkt
+                diskriminiert wurden.
               </p>
-              <p>
-                Es wird sichtbar, wie der österreichische Arbeitsmarkt vorher
-                schon aufgrund von persönlichen Merkmalen diskriminiert hat. Der
-                AMS-Algorithmus wird zum Diskriminierungs-Barometer!
-              </p>
+              <!-- <p>
+                Daten und statistische Berechnungen können dabei einen Hinweis
+                auf die Verhältnisse am Arbeitsmarkt geben, aber auch nicht
+                genau. Der AMS-Algorithmus ist also eher wie ein verzerrtes
+                Bild.
+              </p> -->
+              <p>Es wird sichtbar, wie der österreichische Arbeitsmarkt in der
+                Vergangenheit aufgrund von persönlichen Merkmalen strukturell
+                diskriminiert hat. Der AMS-Algorithmus wird zum Diskriminierungs-Barometer!</p>
             </div>
 
             <div class="steps">
