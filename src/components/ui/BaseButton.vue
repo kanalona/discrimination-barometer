@@ -171,7 +171,7 @@ button:disabled {
   cursor: default;
 }
 a.tab.router-link-active {
-  color: #ff7b00 !important;
-  border-color: #ff7b00 !important;
+  color: var(--primaryColor) !important;
+  border-color: var(--primaryColor) !important;
 }
 </style>

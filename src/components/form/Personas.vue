@@ -124,6 +124,6 @@ export default {
   text-decoration: none;
 }
 .more-less-btn:hover {
-  color: #ff7b00;
+  color: var(--primaryColor);
 }
 </style>

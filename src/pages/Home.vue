@@ -179,7 +179,7 @@ h1 {
   font-size: 50px;
 }
 .highlight {
-  color: #ff7b00;
+  color: var(--primaryColor);
   font-size: 3rem;
   font-style: italic;
   text-align: center;
@@ -189,6 +189,6 @@ h1 {
   color: white;
 }
 .arrow:hover {
-  color: #ff7b00;
+  color: var(--primaryColor);
 }
 </style>
