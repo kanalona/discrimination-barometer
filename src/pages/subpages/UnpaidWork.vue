@@ -92,14 +92,14 @@
               <em><strong>(disziplinäre Ebene)</strong></em
               >. Aber auch kulturelle Vorstellungen darüber wer für die
               Kinderbetreuung zuständig sein sollte haben Einfluss auf die
-              Erhaltung dieses dominanten Modells
+              Erhaltung dieses dominanten Modells - z.B. „Ich möchte gerne mehr
+              Zeit mit meinen Kindern verbringen.“
               <em><strong>(hegemoniale Ebene)</strong></em
-              >. Ebenso spielen individuellen Erfahrungen eine Rolle
+              >. Ebenso spielen individuelle Erfahrungen mit beispielweise
+              Vorwürfen eine Rolle - z.B. „Wie kannst du deine Interessen deinen
+              Kindern vorziehen?“
               <em><strong>(zwischenmenschliche Ebene)</strong></em
-              >. Das können zum Beispiel Erfahrungen mit Vorwürfen sein („Wie
-              kannst du deine Interessen deinen Kindern vorziehen?“) oder auch
-              individuelle Bedürfnisse („Ich möchte gerne mehr Zeit mit meinen
-              Kindern verbringen.“)
+              >.
             </p>
             <p>
               Diese verschiedenen Ebenen sind entscheidend für die Frage wie
