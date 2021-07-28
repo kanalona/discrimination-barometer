@@ -1,15 +1,14 @@
 <template>
-  <div class="result-container">
-    <base-card class="card">
+  <base-card class="card centered">
+    <div class="result-container centered">
       <h2>Chance auf dem Arbeitsmarkt</h2>
       <div class="progress">
         <div class="progress-value" :style="{ width: result + '%' }">
-          <!-- <h2>{{ result }}%</h2> -->
           <h1><span ref="result"></span>%</h1>
         </div>
       </div>
-    </base-card>
-  </div>
+    </div>
+  </base-card>
 </template>
 
 <script>
@@ -51,17 +50,15 @@ export default {
 
 <style scoped>
 .card {
-  padding: 10px;
-}
-.result-container {
-  /* background-color: rgba(241, 241, 241, 0.8);  */
-  /* #f1f1f1 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px 50px;
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+.result-container {
+  max-width: 90rem;
+  width: 100%;
+  margin: auto;
 }
 .progress {
   background: #e8e8e8;
@@ -70,8 +67,7 @@ export default {
   padding: 5px 5px;
   margin: 5px 5px;
   height: 60px;
-  width: auto;
-  max-width: 90rem;
+  width: 100%;
 }
 .progress-value {
   display: flex;
@@ -84,6 +80,7 @@ export default {
   background: #fff;
   color: var(--primaryColor);
   height: 50px;
+  
 }
 h1 {
   font-size: 2.5rem;

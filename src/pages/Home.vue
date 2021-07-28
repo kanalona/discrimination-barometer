@@ -7,7 +7,7 @@
           es die Gesellschaft davor schon war. Die Algorithmen zeigen die
           gesellschaftlichen Verhältnisse und somit auch die Diskriminierung.
         </p>
-        <router-link class="arrow" to="#intro">&rarr;</router-link>
+        <router-link class="arrow" to="#intro">Start &rarr;</router-link>
       </div>
     </banner>
 
