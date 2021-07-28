@@ -29,12 +29,23 @@
         </base-radio>
       </div>
     </div>
-    <img
-      v-show="showDescription && criteriumKey === 'wohnort'"
-      src="../../assets/RGS-Karte-transparent.png"
-      alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
-      class="map"
-    />
+    <div class="map" v-show="showDescription && criteriumKey === 'wohnort'">
+      <img
+        src="../../assets/RGS-Karte.png"
+        alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
+      />
+      <div class="footnote">
+        <p>Regionale Arbeitsmarktbedingungen, Basisjahr 2017</p>
+        <p>
+          Quelle: Judit Marte-Huainigg (2020): Arbeitsmarktchancen
+          Assistenz-System. Hintergründe, Strategie, Modell.
+          <a
+            href="https://slidetodoc.com/arbeitsmarktchancen-assistenzsystem-hintergrnde-strategie-modell-judit-martehuainigg-vor/"
+            >online verfügbar</a
+          >
+        </p>
+      </div>
+    </div>
   </li>
 </template>
 
@@ -185,9 +196,11 @@ li:not(:last-of-type) {
   padding: 5px;
 }
 .map {
+  margin: 20px 0;
+}
+.map > img {
   display: block;
   width: 100%;
   height: auto;
-  /* max-width: 1000px; */
 }
 </style>

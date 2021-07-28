@@ -32,7 +32,7 @@ export default {
   background: #eee;
 }
 .step:hover {
-  background: #ff7b00;
+  background: var(--primaryColor);
   cursor: pointer;
 }
 .step:hover .text {

@@ -27,7 +27,7 @@ export default {
   props: {
     backgroundColor: {
       type: String,
-      default: "#131313",
+      default: "#1d1e20",
       required: false,
     },
     imageUrl: {
@@ -44,8 +44,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  height: 100vh;
+  background: rgb(0, 0, 0);
+  min-height: 100vh;
   color: #f1f1f1;
    background-position: right bottom;
  /* background-color: #cccccc; */

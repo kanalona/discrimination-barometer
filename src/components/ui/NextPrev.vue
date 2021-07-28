@@ -53,7 +53,7 @@ export default {
   color: #888;
 } */
 .link:hover {
-  color: #ff7b00;
+  color: var(--primaryColor);
 }
 .previous {
   margin-right: auto;

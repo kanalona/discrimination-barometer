@@ -5,14 +5,14 @@
         <h4 class="nomargin">Gedankenexperiment</h4>
       </div>
       <p>
-        Versuchen Sie den höchsten und den niedrigsten Wert zu erreichen. Was
-        zeichnet diese Personen und ihren Alltag aus? Welche Merkmale sind
-        ausschlaggebend für die Arbeitsmarktchancen? Und welche Merkmale spielen
-        wie zusammen?
+        Versuche, mit Hilfe des Barometers oben, die höchste und die niedrigste
+        Chance zu erreichen. Was zeichnet diese Personen aus? Welche Merkmale
+        sind ausschlaggebend für die Arbeitsmarktchancen? Und welche Merkmale
+        spielen wie zusammen?
       </p>
       <p>
-        Wenn Sie fertig sind können Sie hier mehr zu diesen zwei fiktiven
-        Personen zu erfahren:
+        Wenn du fertig bist, kannst du hier mehr zu diesen zwei fiktiven
+        Personen erfahren:
         <a
           class="more-less-btn grey font-regular"
           href="#personas"
@@ -28,15 +28,14 @@
           Beeinträchtigung (z.B. Diabetes) und Kinder. Sie hat einen schweizer
           Pass und hat einen Pflichtschulabschluss gemacht. Bisher hat sie im
           Dienstleistungsbereich (z.B. im Handel) gearbeitet. In den letzten
-          vier Jahren war sie einmal für knapp 1 Jahr arbeitslos gemeldet und
+          vier Jahren war sie einmal für knapp ein Jahr arbeitslos gemeldet und
           hat an unterstützenden Maßnahmen des AMS teilgenommen<sup
             class="font-small"
             >1</sup
-          >. Sie beginnt einen neuen Job im Supermarkt, aber die Filiale, in der
-          Linda arbeitet schließt und den Mitarbeiter*innen werden gekündigt.
-          Nun nimmt Linda wieder den Weg zum AMS und bekommt eine
-          Integrationschance in den Arbeitsmarkt von
-          <strong>1,98%</strong> errechnet.
+          >. Sie beginnt einen neuen Job im Supermarkt, aber die Filiale in der
+          Linda arbeitet schließt und den Mitarbeiter*innen wird gekündigt. Nun
+          nimmt Linda wieder den Weg zum AMS und bekommt eine Integrationschance
+          in den Arbeitsmarkt von <strong>1,98%</strong> errechnet.
         </p>
         <div class="footnote">
           <p>
@@ -50,13 +49,13 @@
           <strong>Thomas</strong> ist männlich, 23 Jahre, wohnt in Innsbruck,
           hat keine Beeinträchtigung und keine Kinder. Er hat einen
           italienischen Pass und hat eine Ausbildung im Produktionsbereich
-          gemacht (z.B. als Tischler). Die letzten 4 Jahre war er in diesem
+          gemacht (z.B. als Tischler). Die letzten vier Jahre war er in diesem
           Bereich vollbeschäftigt, hat aber einmal im Jahr nach einem neuen Job
           gesucht und sich für ca. 2,5 Monate pro Jahr beim AMS arbeitslos
           gemeldet<sup class="font-small">2</sup>. Jedes Mal wurde er nach
           dieser Zeit ohne Teilnahme an Maßnahmen des AMS wieder erwerbstätig.
-          Thomas beginnt einen neuen Job, doch die Firma in der er arbeitet geht
-          bankrott und die Mitarbeiter*innen verlieren ihre Arbeit. Nun nimmt
+          Thomas beginnt einen neuen Job, doch die Firma in der er arbeitet
+          schließt und den Mitarbeiter*innen wird gekündigt. Nun nimmt
           Thomas wieder den Weg zum AMS und bekommt eine Integrationschance in
           den Arbeitsmarkt von <strong>93,64%</strong> errechnet.
         </p>
@@ -83,7 +82,7 @@ export default {
       if (this.showMore === true) {
         return "⮟ Lösung verbergen";
       } else {
-        return "⮞ Lösung anzeigen"
+        return "⮞ Lösung anzeigen";
       }
     },
   },
@@ -125,6 +124,6 @@ export default {
   text-decoration: none;
 }
 .more-less-btn:hover {
-  color: #ff7b00;
+  color: var(--primaryColor);
 }
 </style>

@@ -17,8 +17,8 @@
           tab
           link
           mode="flat"
-          primaryColor="#ffffff"
-          secondaryColor="#ff7b00"
+          primaryColor="white"
+          secondaryColor="royalblue"
           to="/kontext/zwei-geschlechter#context"
           >Zweigeschlechtlichkeit &rarr;</base-button
         >
@@ -26,8 +26,8 @@
           tab
           link
           mode="flat"
-          primaryColor="#ffffff"
-          secondaryColor="#ff7b00"
+          primaryColor="white"
+          secondaryColor="royalblue"
           to="/kontext/betreuungspflichten#context"
           >Betreuungspflichten &rarr;</base-button
         >

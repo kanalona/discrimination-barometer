@@ -75,13 +75,12 @@ input {
   display: none;
 }
 input:enabled:not(:checked) + label:hover {
-  background-color: rgb(255, 123, 0, 0.2);
-  /* border: rgb(68, 176, 236); */
+  background-color: var(--primaryOpaque);
 }
 input:checked + label {
   /* border: 2px solid #4c59a8; */
-  background: #ff7b00;
-  border: 2px solid #ff7b00;
+  background: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
   color: #fff;
 }
 input:disabled + label {

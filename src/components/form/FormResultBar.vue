@@ -1,6 +1,6 @@
 <template>
   <div class="result-container">
-    <base-card>
+    <base-card class="card">
       <h2>Chance auf dem Arbeitsmarkt</h2>
       <div class="progress">
         <div class="progress-value" :style="{ width: result + '%' }">
@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  padding: 10px;
+}
 .result-container {
   /* background-color: rgba(241, 241, 241, 0.8);  */
   /* #f1f1f1 */
@@ -68,6 +71,7 @@ export default {
   margin: 5px 5px;
   height: 60px;
   width: auto;
+  max-width: 90rem;
 }
 .progress-value {
   display: flex;
@@ -78,7 +82,7 @@ export default {
   transition-duration: 0.9s;
   border-radius: 100px;
   background: #fff;
-  color: #ff7b00;
+  color: var(--primaryColor);
   height: 50px;
 }
 h1 {

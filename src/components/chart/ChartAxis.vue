@@ -57,7 +57,7 @@ export default {
   shape-rendering: auto;
 }
 .axis.highlight path {
-  stroke: #ff7b00;
+  stroke: var(--primaryColor);
 }
 .axis.transparent path {
   stroke: none;

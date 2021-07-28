@@ -15,19 +15,19 @@
         <base-button
           link
           mode="flat"
-          primaryColor="#ffffff"
-          secondaryColor="#ff7b00"
+          primaryColor="white"
+          secondaryColor="royalblue"
           to="#barometer"
           >Barometer &rarr;</base-button
         >
       </template>
       <template #more-content>
         <p>
-          Für die Berechnung der Integrationschance auf dem Arbeitsmarkt benutzt
+          Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt
           das AMS verschiedene statistische Verfahren und Modelle. Exemplarisch
           wird hier nur eines von vielen Modellen vorgestellt. Dieses Modell
           berechnet die kurzfristige Integrationschance für Arbeitssuchende,
-          d.h. die Chance in den ersten sieben Monaten für mindestens 3 Monate
+          d.h. die Chance in den ersten sieben Monaten für mindestens drei Monate
           beschäftigt zu sein. Für Jugendliche, Migrant*innen und Personen, die
           nicht durchgängig beschäftigt waren gibt es andere Modelle.
         </p>
