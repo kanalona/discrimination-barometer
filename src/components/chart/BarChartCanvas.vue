@@ -49,7 +49,7 @@
             <g
               class="attr-details"
               v-if="isSelected(category.label) || isBaseGroup(attribute.value)"
-              :fill="baseView ? '#ff7b00' : setColor(category.label)"
+              :fill="baseView ? '#131313' : setColor(category.label)"
             >
               <text
                 class="attr-label"
