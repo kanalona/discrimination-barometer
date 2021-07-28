@@ -52,8 +52,8 @@ export default {
 }
 
 :root {
-  --primaryColor: rgb(0,0,255,1);
-  --primaryOpaque:rgb(0,0,255,0.2);
+  --primaryColor: royalblue;
+  --primaryOpaque: rgb(106, 90, 205, 0.2);
   --white: #ffffff;
 }
 * {

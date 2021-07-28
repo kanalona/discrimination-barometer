@@ -25,7 +25,7 @@ app.use(
         component: 'tippy', // => <tippy/>
         componentSingleton: 'tippy-singleton', // => <tippy-singleton/>
     }
-)
+);
 
 app.component('base-card', BaseCard);
 app.component('base-button', BaseButton);

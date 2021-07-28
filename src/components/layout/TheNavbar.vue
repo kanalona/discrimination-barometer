@@ -108,7 +108,7 @@ a {
 /* a:hover,
 a:active,
 a.router-link-active {
-  color: #ff7b00;
+  color: var(--primaryColor);
 } */
 
 /* a::before{
@@ -118,7 +118,7 @@ a.router-link-active {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #ff7b00;
+  background-color: var(--primaryColor);
   visibility: hidden;
   transform-origin:left;
   transform: scaleX(0);
@@ -131,6 +131,6 @@ a:hover::before{
 
 a:active,
 a.router-link-active {
-  border-bottom: 2px solid #ff7b00;
+  border-bottom: 2px solid var(--primaryColor);
 } */
 </style>

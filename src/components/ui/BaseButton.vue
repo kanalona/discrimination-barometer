@@ -151,6 +151,13 @@ export default {
 </script>
 
 <style scoped>
+
+/* .flat {
+  color: var(--primaryColor)
+          borderColor: this.primaryColor,
+          borderRadius: 0,
+          backgroundColor: "",
+} */
 button,
 a {
   display: inline-block;

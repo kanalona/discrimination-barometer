@@ -15,8 +15,8 @@
         <base-button
           link
           mode="flat"
-          primaryColor="#ffffff"
-          secondaryColor="#ff7b00"
+          primaryColor="white"
+          secondaryColor="royalblue"
           to="#barometer"
           >Barometer &rarr;</base-button
         >

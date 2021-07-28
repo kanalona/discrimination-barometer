@@ -31,7 +31,7 @@
     </div>
     <img
       v-show="showDescription && criteriumKey === 'wohnort'"
-      src="../../assets/RGS-Karte-transparent.png"
+      src="../../assets/RGS-Karte.png"
       alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
       class="map"
     />

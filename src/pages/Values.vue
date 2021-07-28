@@ -16,8 +16,8 @@
         <base-button
           link
           mode="flat"
-          primaryColor="#ffffff"
-          secondaryColor="#ff7b00"
+          primaryColor="white"
+          secondaryColor="royalblue"
           to="#barcharts"
           >Zu den Grafiken &rarr;</base-button
         >
