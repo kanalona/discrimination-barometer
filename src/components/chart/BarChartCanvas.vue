@@ -111,12 +111,32 @@
         ></chart-axis>
       </g>
     </svg>
-    <img
+
+    <div v-show="isSelected('Wohnort (Regionales Arbeitsmarktgeschehen)')">
+      <img
+        src="../../assets/RGS-Karte.png"
+        alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
+        class="map"
+      />
+      <div class="footnote">
+        <p>Regionale Arbeitsmarktbedingungen, Basisjahr 2017</p>
+        <p>
+          Quelle: Judit Marte-Huainigg (2020): Arbeitsmarktchancen
+          Assistenz-System. Hintergründe, Strategie, Modell.
+          <a
+            href="https://slidetodoc.com/arbeitsmarktchancen-assistenzsystem-hintergrnde-strategie-modell-judit-martehuainigg-vor/"
+            >online verfügbar</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- <img
       v-show="isSelected('Regionales Arbeitsmarktgeschehen')"
       src="../../assets/RGS-Karte.png"
       alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
       class="map"
-    />
+    /> -->
   </div>
 </template>
 
@@ -277,8 +297,7 @@ export default {
     setColor(category) {
       if (this.baseView === true) {
         return this.hexToRgb(this.color(category), 0.3);
-      }
-      else {
+      } else {
         return this.color(category);
       }
     },
@@ -379,10 +398,11 @@ export default {
 
 <style scoped>
 .map {
+  width: 100%;
   margin: 20px 0;
 }
-.button-group{
-  display:grid;
+.button-group {
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-flow: column;
 }
