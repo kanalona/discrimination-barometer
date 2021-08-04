@@ -25,7 +25,7 @@
       <base-card class="persona1">
         <p class="nomargin">
           <strong>Linda</strong> ist weiblich, 51 Jahre, wohnt in Graz, hat eine
-          Beeinträchtigung (z.B. Diabetes) und Kinder. Sie hat einen schweizer
+          Beeinträchtigung (z.B. Diabetes) und Kinder. Sie hat einen US-amerikanischen
           Pass und hat einen Pflichtschulabschluss gemacht. Bisher hat sie im
           Dienstleistungsbereich (z.B. im Handel) gearbeitet. In den letzten
           vier Jahren war sie einmal für knapp ein Jahr arbeitslos gemeldet und
@@ -47,7 +47,7 @@
       <base-card class="persona2">
         <p class="nomargin">
           <strong>Thomas</strong> ist männlich, 23 Jahre, wohnt in Innsbruck,
-          hat keine Beeinträchtigung und keine Kinder. Er hat einen
+          hat keine Beeinträchtigung und (keine) Kinder. Er hat einen
           italienischen Pass und hat eine Ausbildung im Produktionsbereich
           gemacht (z.B. als Tischler). Die letzten vier Jahre war er in diesem
           Bereich vollbeschäftigt, hat aber einmal im Jahr nach einem neuen Job
