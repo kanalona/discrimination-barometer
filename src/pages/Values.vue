@@ -27,13 +27,13 @@
           Für die Berechnung der Chancen auf dem Arbeitsmarkt werden zwei
           verschiedene Arten von Daten benutzt: Persönliche Merkmale und
           Merkmale zur Vorkarriere, diese enthalten den Erwerbsverlauf und
-          vergangene AMS-Betreuungen. Außerdem gibt es für die Berechnung
-          noch eine sogenannte Basisgruppe. Diese ist unteranderem männlich,
-          unter 30 Jahre, Österreicher, hat höchstens einen
-          Pflichtschulabschluss, keine Betreuungspflichten und keine
-          Beeinträchtigung(en). Die Basisgruppe bekommt eine Chance von ca. 52%
-          berechnet. Für jede Abweichung von dieser Basisgruppe werden entweder
-          Prozente abgezogen oder dazugerechnet.
+          vergangene AMS-Betreuungen. Außerdem gibt es für die Berechnung noch
+          eine sogenannte Basisgruppe. Diese ist unteranderem männlich, unter 30
+          Jahre, Österreicher, hat höchstens einen Pflichtschulabschluss, keine
+          Betreuungspflichten und keine Beeinträchtigung(en). Die Basisgruppe
+          bekommt eine Chance von ca. 52% berechnet. Für jede Abweichung von
+          dieser Basisgruppe werden entweder Prozente abgezogen oder
+          dazugerechnet.
         </p>
         <p>
           Beispiel: Eine Person entspricht der Basisgruppe, bis auf den
@@ -43,6 +43,9 @@
         </p>
       </template>
     </banner>
+
+    <!-- <bar-chart-d3 :data="[10, 30, 15, 40, 5]" />
+        <bar-chart-d3 :data="[5, 8, 10, 20, 40]" /> -->
 
     <div class="outer-padding">
       <inner-wrapper id="barcharts">
@@ -63,10 +66,12 @@
 
 <script>
 import BarChart from "../components/chart/BarChart.vue";
+// import BarChartD3 from "../components/chart/BarChartD3.vue";
 
 export default {
   components: {
     BarChart,
+    // BarChartD3,
   },
   data() {
     return {
@@ -92,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-.outer-padding{
+.outer-padding {
   padding: 3rem;
 }
 </style>

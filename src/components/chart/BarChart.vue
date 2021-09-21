@@ -1,16 +1,13 @@
 <template>
   <div>
     <base-card class="bar-chart-container">
-      <div class="border-bottom"> 
+      <div class="border-bottom">
         <p class="font-big nomargin">{{ title }}</p>
       </div>
-      <div
-        v-show="showViewToggle"
-        class="radio-container"
-      >
+      <div v-show="showViewToggle" class="radio-container">
         <simple-radio
-        v-for="option in viewOptions"
-        :key="option.view"
+          v-for="option in viewOptions"
+          :key="option.view"
           :name="option.label + title"
           :id="option.label + title"
           :labelText="option.label"
@@ -113,7 +110,7 @@ export default {
 </script>
 
 <style scoped>
-.bar-chart-container{
+.bar-chart-container {
   margin: 30px 0;
 }
 .radio-container {

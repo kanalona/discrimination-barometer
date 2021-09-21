@@ -23,13 +23,14 @@
       </template>
       <template #more-content>
         <p>
-          Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt
-          das AMS verschiedene statistische Verfahren und Modelle. Exemplarisch
-          wird hier nur eines von vielen Modellen vorgestellt. Dieses Modell
+          Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt das AMS
+          verschiedene statistische Verfahren und Modelle. Exemplarisch wird
+          hier nur eines von vielen Modellen vorgestellt. Dieses Modell
           berechnet die kurzfristige Integrationschance für Arbeitssuchende,
-          d.h. die Chance in den ersten sieben Monaten für mindestens drei Monate
-          beschäftigt zu sein. Für Jugendliche, Migrant*innen und Personen, die
-          nicht durchgängig beschäftigt waren gibt es andere Modelle.
+          d.h. die Chance in den ersten sieben Monaten für mindestens drei
+          Monate beschäftigt zu sein. Für Jugendliche, Migrant*innen und
+          Personen, die nicht durchgängig beschäftigt waren gibt es andere
+          Modelle.
         </p>
       </template>
     </banner>
@@ -43,8 +44,8 @@
               :criterium="criterium"
               :key="key"
               :criterium-key="key"
-              :disabled="disable(key)"
-              @attribute-selected="saveAttribute"
+              :isDisabled="setDisabled(key)"
+              @save-option="storeOption"
             ></form-item>
           </base-card>
         </ul>
@@ -55,7 +56,7 @@
     </inner-wrapper>
 
     <form-result-bar
-      :result="integrationChancePercentage.toFixed(2)"
+      :result="integrationProspectPercentage.toFixed(2)"
     ></form-result-bar>
   </div>
 </template>
@@ -76,31 +77,33 @@ export default {
     return {
       criteria: criteria,
       selections: {},
-      isRefreshed: false,
+      // isRefreshed: false,
     };
   },
   created() {
     this.initializeSelection();
   },
   computed: {
-    integrationChance() {
+    integrationProspect() {
+      console.log("FORM: calculate integration");
       let chance = 0.1;
       Object.keys(this.selections).forEach((criterium) => {
         chance += this.selections[criterium].value;
       });
       return chance;
     },
-    integrationChancePercentage() {
-      const chancePercentage =
-        (Math.exp(this.integrationChance) /
-          (1 + Math.exp(this.integrationChance))) *
-        100;
-
-      return chancePercentage;
+    integrationProspectPercentage() {
+      console.log("FORM: calculate integrationPercent");
+      return (
+        (Math.exp(this.integrationProspect) /
+          (1 + Math.exp(this.integrationProspect))) *
+        100
+      );
     },
   },
   methods: {
     initializeSelection() {
+      console.log("initialize");
       //initialize with the base-group (value=0)
       Object.keys(this.criteria).forEach((criterium) => {
         this.selections[criterium] = this.criteria[criterium].options.find(
@@ -108,19 +111,29 @@ export default {
         );
       });
     },
-    disable(key) {
-      if (key === "betreuung" && this.selections.geschlecht.value === 0) {
+    setDisabled(criteriumKey) {
+      console.log("setDisable: " + criteriumKey);
+      if (
+        criteriumKey === "betreuung" &&
+        this.selections.geschlecht.value === 0
+      ) {
+        console.log("true");
         return true;
       }
       let gfKeys = ["gfDauer", "massnahmen"];
 
-      if (gfKeys.includes(key) && this.selections.gfAnzahl.value === 0) {
+      if (
+        gfKeys.includes(criteriumKey) &&
+        this.selections.gfAnzahl.value === 0
+      ) {
+        console.log("true");
         return true;
       }
-
+      console.log("false");
       return false;
     },
-    saveAttribute(option, criteriumKey) {
+    storeOption(option, criteriumKey) {
+      console.log("FORM: storing in selections");
       this.selections[criteriumKey] = option;
     },
   },

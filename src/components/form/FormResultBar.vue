@@ -42,6 +42,8 @@ export default {
   },
   watch: {
     result: function (newValue) {
+      console.log("FRB: result changed");
+      console.log(newValue);
       this.countUp.update(newValue);
     },
   },

@@ -84,7 +84,7 @@
 import { scaleLinear, scaleBand, scaleOrdinal } from "d3-scale";
 import { stack } from "d3-shape";
 import { selectAll } from "d3-selection";
-import { transition } from "d3-transition";
+// import { transition } from "d3-transition";
 import ChartAxis from "../chart/ChartAxis.vue";
 
 export default {
