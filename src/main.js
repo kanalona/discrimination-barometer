@@ -11,6 +11,7 @@ import Banner from './components/ui/Banner.vue'
 import InnerWrapper from './components/ui/InnerWrapper.vue'
 import Steps from './components/ui/Steps.vue'
 import NextPrev from './components/ui/NextPrev.vue'
+import Tabs from './components/ui/Tabs.vue'
 
 
 import App from './App.vue';
@@ -35,5 +36,7 @@ app.component('banner', Banner);
 app.component('inner-wrapper', InnerWrapper);
 app.component('steps', Steps);
 app.component('next-prev', NextPrev);
+app.component('tabs', Tabs);
+
 
 app.mount('#app');

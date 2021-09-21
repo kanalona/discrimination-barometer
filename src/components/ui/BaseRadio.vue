@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  emits: ["change", "save"],
+  emits: ["selected-value"],
   props: {
     name: {
       type: String,
@@ -43,14 +43,22 @@ export default {
   computed: {
     selectedValue: {
       get() {
+        console.log("BASE RADIO: get selected option");
         return this.modelValue;
       },
       set() {
-        this.$emit("change", this.value);
-        this.$emit("save");
+        console.log("BASE RADIO: emitting save");
+        this.$emit("selected-option");
       },
     },
   },
+  watch: {
+    selectedValue: function (newValue) {
+      console.log("BASE RADIO: selected prop was changed");
+      console.log(this.name + " " + this.selectedValue);
+    },
+  }
+
 };
 </script>
 

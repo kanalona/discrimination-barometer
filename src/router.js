@@ -24,18 +24,19 @@ const router = createRouter({
     }
   },
   routes: [
-    { path: '/', component: Home }, //for developing the form modul
+    { path: '/', component: Home },
     { path: '/barometer', component: Form },
     { path: '/berechnung', component: Values },
     {
       path: '/kontext', component: Meaning, children: [
-        { path: '', redirect: '/kontext/zwei-geschlechter' }, // default child path
         { path: 'zwei-geschlechter', component: Binary },
-        { path: 'betreuungspflichten', component: UnpaidWork }
+        { path: 'betreuungspflichten', component: UnpaidWork },
+        { path: '', redirect: '/kontext/zwei-geschlechter' }, // default child path
       ]
 
     },
-    { path: '/:notFound(.*)', component: NotFound }],
+    { path: '/:notFound(.*)', component: NotFound }
+  ],
 
 });
 

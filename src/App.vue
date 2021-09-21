@@ -13,11 +13,11 @@
 
 <script>
 import TheNavbar from "./components/layout/TheNavbar.vue";
-import TopContainer from "./components/layout/TopContainer.vue";
+// import TopContainer from "./components/layout/TopContainer.vue";
 export default {
   components: {
     TheNavbar,
-    TopContainer,
+    // TopContainer,
   },
   data() {
     return {

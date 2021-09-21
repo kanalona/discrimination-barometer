@@ -44,17 +44,9 @@
 </template>
 
 <script>
-//intersektionalität
-import UnpaidWork from "./subpages/UnpaidWork.vue";
-import Binary from "./subpages/Binary.vue";
-import Tabs from "../components/ui/Tabs.vue";
 
 export default {
-  components: {
-    UnpaidWork,
-    Binary,
-    Tabs,
-  },
+ 
   data() {
     return {
       tabLinks: [

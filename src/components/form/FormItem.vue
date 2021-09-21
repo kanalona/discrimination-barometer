@@ -20,8 +20,8 @@
           :id="criteriumKey + key"
           :value="option.value"
           :modelValue="selectedOption"
-          @change="changeOption"
-          @save="saveOption(option, criteriumKey)"
+          @selected-option="saveOption(option, criteriumKey)"
+          
           :disabled="disable(option)"
           :labelText="option.text"
           v-tippy="toolTipDivers"
@@ -54,7 +54,7 @@ import "tippy.js/animations/shift-away.css";
 import { directive } from "vue-tippy";
 
 export default {
-  emits: ["attribute-selected", "refreshed"],
+  emits: ["save-option"],
   directives: {
     tippy: directive,
   },
@@ -67,7 +67,7 @@ export default {
       type: String,
       default: "",
     },
-    disabled: {
+    isDisabled: {
       type: Boolean,
       default: false,
     },
@@ -86,7 +86,7 @@ export default {
     };
   },
   mounted() {
-    if (this.hasTooltip && this.disabled) {
+    if (this.hasTooltip && this.isDisabled) {
       this.setUpTippy();
     } else if (this.criterium) {
       //this.criterium löschen?
@@ -94,13 +94,15 @@ export default {
     }
   },
   watch: {
-    disabled: function (newValue) {
+    isDisabled: function (newValue) {
+      console.log("FORM ITEM: prop isDisabled changed");
       if (newValue === true) {
         this.setUpTippy();
-        // reset chosen option to default if input is disabled
+        // reset chosen option to default if input is isDisabled
         let option = this.criterium.options.find((opt) => opt.value === 0);
         this.selectedOption = option.value;
-        this.$emit("attribute-selected", option, this.criteriumKey);
+        console.log("FORM ITEM: emits save from isDisabled-watcher");
+        this.$emit("save-option", option, this.criteriumKey);
       } else {
         this.disableTippy();
       }
@@ -135,16 +137,22 @@ export default {
       this.showDescription = !this.showDescription;
     },
     saveOption(option, criteriumKey) {
-      this.$emit("attribute-selected", option, criteriumKey);
+      console.log("FORM ITEM: calling saveOption");
+      console.log("FORM ITEM: emitting save");
+      console.log("wmitted option: ");
+      console.log(option.value);
+      this.setOption(option.value);
+      this.$emit("save-option", option, criteriumKey);
     },
-    changeOption(selected) {
-      this.selectedOption = selected;
+    setOption(option){
+      console.log("prop selectedOption" + option);
+      this.selectedOption = option;
     },
     disable(option) {
       if (option.text === "divers / inter / offen / kein Eintrag") {
         return true;
       } else {
-        return this.disabled;
+        return this.isDisabled;
       }
     },
     setUpTippy() {
