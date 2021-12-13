@@ -46,7 +46,7 @@
       </base-card>
       <base-card class="persona2">
         <p class="nomargin">
-          <strong>Thomas</strong> ist männlich, 23 Jahre, wohnt in Innsbruck,
+          <strong>Lorenz</strong> ist männlich, 23 Jahre, wohnt in Innsbruck,
           hat keine Beeinträchtigung und (keine) Kinder. Er hat einen
           italienischen Pass und hat eine Ausbildung im Produktionsbereich
           gemacht (z.B. als Tischler). Die letzten vier Jahre war er in diesem
