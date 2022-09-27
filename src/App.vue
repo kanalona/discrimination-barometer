@@ -13,32 +13,16 @@
 
 <script>
 import TheNavbar from "./components/layout/TheNavbar.vue";
-// import TopContainer from "./components/layout/TopContainer.vue";
 export default {
   components: {
     TheNavbar,
-    // TopContainer,
   },
-  data() {
-    return {
-      padding: 0,
-    };
-  },
-  methods: {
-    addPadding(isSticky, headerHeight) {
-      if (isSticky) {
-        this.padding = `${headerHeight}px`;
-      } else {
-        this.padding = `0px`;
-      }
-    },
-  },
+
 };
 </script>
 
 <style>
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -136,7 +120,6 @@ h1, h2, h3 {
   background-color: #535252;
   color: #fff;
 }
-
 .tippy-box[data-theme~="gray-white"][data-placement^="top"]
   > .tippy-arrow::before {
   border-top-color: #535252;
@@ -276,11 +259,9 @@ p {
 .font-light {
   font-weight: 300;
 }
-
 .font-regular {
   font-weight: 400;
 }
-
 .font-heavy {
   font-weight: 700;
 }
@@ -290,26 +271,21 @@ p {
 .left {
   text-align: left;
 }
-
 .right {
   text-align: right;
 }
-
-.center {
+/* .center {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-
+} */
 .justify {
   text-align: justify;
 }
-
 .nomargin {
   margin: 0;
   padding: 0;
 }
-
 .background-wrapper > * {
   padding: 3rem;
   /* width: 100%; */
