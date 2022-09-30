@@ -1,5 +1,5 @@
 <template>
-  <div class="inner" :style="{ backgroundColor: backgroundColor }">
+  <div class="width-wrapper" :style="{ backgroundColor: backgroundColor }">
     <slot></slot>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.inner {
+.width-wrapper {
   width: 100%;
   margin: 0 auto;
   max-width: 65em;
