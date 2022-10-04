@@ -17,6 +17,7 @@ import InnerWrapper from './components/ui/InnerWrapper.vue'
 import Steps from './components/ui/Steps.vue'
 import NextPrev from './components/ui/NextPrev.vue'
 import Tabs from './components/ui/Tabs.vue'
+import ImgTextItem from './components/ui/ImgTextItem.vue'
 
 
 import App from './App.vue';
@@ -42,6 +43,7 @@ app.component('inner-wrapper', InnerWrapper);
 app.component('steps', Steps);
 app.component('next-prev', NextPrev);
 app.component('tabs', Tabs);
+app.component('img-text-item', ImgTextItem);
 
 
 app.mount('#app');
