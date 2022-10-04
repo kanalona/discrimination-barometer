@@ -1,4 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css"
+import "./assets/scss/main.scss";
+import "bootstrap"
+
 
 import { createApp } from 'vue';
 import router from './router.js';
@@ -43,4 +46,4 @@ app.component('tabs', Tabs);
 
 app.mount('#app');
 
-import "bootstrap/dist/js/bootstrap.js"
+// import "bootstrap/dist/js/bootstrap.js"

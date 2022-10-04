@@ -185,7 +185,7 @@ h6 {
 }
 p {
   font-size: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
 }
 .font-huge {
@@ -303,7 +303,7 @@ p {
 }
 
 /*SPACING*/
-.w-25 {
+/* .w-25 {
  width:25%!important
 }
 .w-50 {
@@ -2768,9 +2768,6 @@ p {
 .mw-100 {
  max-width:100%!important
 }
-.mw-65 {
- max-width:65%!important
-}
 .mh-100 {
  max-height:100%!important
 }
@@ -5521,6 +5518,6 @@ p {
  .ml-xl-auto,
  .mx-xl-auto {
   margin-left:auto!important
- }
-}
+ } 
+}*/
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div>
     <banner>
-      <p class="font-huge primaryColor italic">
+      <h1 class="font-huge primaryColor italic">
         Vorhersagealgorithmen sind oft genauso gut darin zu diskriminieren wie
         es die Gesellschaft davor schon war. Die Algorithmen zeigen die
         gesellschaftlichen Verhältnisse und somit auch die Diskriminierung.
-      </p>
+      </h1>
       <router-link class="arrow" to="#intro">Start &rarr;</router-link>
     </banner>
 
@@ -15,17 +15,17 @@
           class="
             row
             my-7 my-md-8 my-lg-9 my-xl-10
-            mx-7 mx-md-8 mx-lg-9 mx-xl-10
             left
           "
         >
           <div class="col">
-            <p class="font-big">
+            <img src="..\assets\ams-explanation.png" class="img-fluid" alt="">
+          </div>
+          <div class="col align-self-center">
+            <h2>
               In Österreich soll ein Algorithmus die Chancen von
               Arbeitssuchenden auf dem Arbeitsmarkt vorhersagen.
-            </p>
-          </div>
-          <div class="col">
+            </h2>
             <p>
               Dabei werden Arbeitssuchende in drei Gruppen eingeteilt:
               Arbeitssuchende mit niedrigen, mittleren und hohe Chancen. Je
@@ -43,17 +43,17 @@
           class="
             row
             my-7 my-md-8 my-lg-9 my-xl-10
-            mx-7 mx-md-8 mx-lg-9 mx-xl-10
             left
           "
         >
           <div class="col">
-            <p class="font-big">
+            <img src="..\assets\orakel1.png" class="img-fluid" alt="">
+          </div>
+          <div class="col align-self-center">
+            <h2>
               Vorhersagealgorithmen können Veränderungen unwahrscheinlich machen
               und so Diskriminierung erhalten.
-            </p>
-          </div>
-          <div class="col">
+            </h2>
             <p>
               Die Chance in den Arbeitsmarkt integriert zu werden berechnet der
               Algorithmus mit Daten, die das AMS gesammelt hat. Es werden also
@@ -70,7 +70,6 @@
           class="
             row
             my-7 my-md-8 my-lg-9 my-xl-10
-            mx-7 mx-md-8 mx-lg-9 mx-xl-10
             left
           "
         >
