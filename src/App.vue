@@ -35,7 +35,8 @@ export default {
   background: #f1f1f1;
 }
 :root {
-  --primaryColor: royalblue;
+  /* --primaryColor: royalblue; */
+  --primaryColor: #eeff78;
   --primaryOpaque: rgb(106, 90, 205, 0.2);
   --white: #ffffff;
 }
@@ -75,6 +76,10 @@ a:hover,
 a:active,
 a.router-link-active {
   color: var(--primaryColor);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  hyphens: auto;
 }
 
 /*TOOLTIPS */
@@ -165,7 +170,6 @@ a.router-link-active {
 /* TYPOGRAPHY */
 .fw-300 {
   font-weight: 300;
-
 }
 /* h1 {
   font-size: 2.5rem;
@@ -219,6 +223,9 @@ p {
 .italic {
   font-style: italic;
 }
+.upper-case {
+  text-transform: uppercase;
+}
 
 /*FONT COLORS*/
 .darkgrey {
@@ -269,6 +276,7 @@ p {
 } */
 
 /* POSITIONING */
+
 .centered {
   display: flex;
   flex-direction: column;
@@ -288,6 +296,7 @@ p {
 }
 .justify {
   text-align: justify;
+  hyphens: auto;
 }
 .margin-auto {
   margin: auto;
@@ -299,17 +308,36 @@ p {
 
 /*BACKGROUND*/
 
-.bg-wrapper .bg-child {
+/* .bg-wrapper .bg-child {
   display: flex;
 }
 .bg-wrapper .bg-child:nth-child(2n) {
   background-color: rgb(250, 250, 250);
-}
+} */
 
 .width-wrapper {
   width: 100%;
   margin: 0 auto;
   max-width: 65em;
   padding: 0 1rem;
+}
+
+.headline-slash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.headline-slash::before{
+  content: "/";
+  margin-right: 1rem;
+  color: var(--primaryColor);
+  font-size: 4em;
+}
+.headline-slash::after{
+  content: "/";
+  margin-left: 1rem;
+  color: var(--primaryColor);
+  font-size: 4em;
 }
 </style>
