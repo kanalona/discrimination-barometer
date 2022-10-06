@@ -1,14 +1,15 @@
 <template>
   <div>
-    <banner class="headline-slash">
+    <banner>
       <template #heading>
-        <h1 class="nomargin">Das Diskriminierungs-Barometer</h1>
+        <h1 class="headline-slash">Das Diskriminierungs-Barometer</h1>
       </template>
-      <template #content>
+      <template #text>
         <h5 class="nomargin font-big">
-          Die hier angezeigte Chance gibt nicht die tatsächlich berechnete
-          Chance an, kann aber trotzdem einen Hinweis auf Diskriminierung am
-          Arbeitsmarkt geben.
+          Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt das AMS
+          verschiedene statistische Verfahren und Modelle. Exemplarisch wird
+          hier eines davon vorgestellt. Die dabei berechnete Chance kann einen
+          Hinweis auf Diskriminierung am Arbeitsmarkt geben.
         </h5>
       </template>
       <template #button>
@@ -18,26 +19,19 @@
           primaryColor="white"
           secondaryColor="royalblue"
           to="#barometer"
-          >Barometer &rarr;</base-button
+          >Zum Barometer &rarr;</base-button
         >
       </template>
-      <template #more-content>
-        
-      </template>
+      <template #more-content> </template>
     </banner>
 
     <p>
-          Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt das AMS
-          verschiedene statistische Verfahren und Modelle. Exemplarisch wird
-          hier nur eines von vielen Modellen vorgestellt. Dieses Modell
-          berechnet die kurzfristige Integrationschance für Arbeitssuchende,
-          d.h. die Chance in den ersten sieben Monaten für mindestens drei
-          Monate beschäftigt zu sein. Für Jugendliche, Migrant*innen und
-          Personen, die nicht durchgängig beschäftigt waren gibt es andere
-          Modelle.
-        </p>
-
-
+      Dieses Modell berechnet die kurzfristige Integrationschance für
+      Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten für
+      mindestens drei Monate beschäftigt zu sein. Für Jugendliche, Migrant*innen
+      und Personen, die nicht durchgängig beschäftigt waren gibt es andere
+      Modelle.
+    </p>
 
     <inner-wrapper class="form-parent-container" id="barometer">
       <div class="item">
@@ -59,22 +53,22 @@
       </div>
     </inner-wrapper>
 
-    <form-result-bar
+    <!-- <form-result-bar
       :result="integrationProspectPercentage.toFixed(2)"
-    ></form-result-bar>
+    ></form-result-bar> -->
   </div>
 </template>
 
 <script>
 import criteria from "@/assets/data/criteria.js";
 import FormItem from "../components/form/FormItem.vue";
-import FormResultBar from "../components/form/FormResultBar.vue";
+// import FormResultBar from "../components/form/FormResultBar.vue";
 import Personas from "../components/form/Personas.vue";
 
 export default {
   components: {
     FormItem,
-    FormResultBar,
+    // FormResultBar,
     Personas,
   },
   data() {

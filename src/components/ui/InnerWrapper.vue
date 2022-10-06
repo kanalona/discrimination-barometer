@@ -20,7 +20,7 @@ export default {
 .width-wrapper {
   width: 100%;
   margin: 0 auto;
-  max-width: 65em;
+  max-width: 90em;
   padding: 0 1rem;
 }
 </style>

@@ -1,21 +1,39 @@
 <template>
-  <div class="banner" :style="{ backgroundColor: backgroundColor}">
-    <inner-wrapper>
+  <div class="banner" :style="{ backgroundColor: backgroundColor }">
+    <!-- <inner-wrapper>
       <slot></slot>
-        <div class="container left">
-          <div class="heading">
-            <slot name="heading"></slot>
-          </div>
-          <div class="content">
-            <slot name="content"></slot>
-          </div>
-          <div class="button">
-            <slot name="button"></slot>
-          </div>
-          <div class="more-content">
-            <slot name="more-content"></slot>
-          </div>
+      <div class="container">
+        <div class="heading">
+          <slot name="heading"></slot>
         </div>
+
+        <div class="content">
+          <slot name="content"></slot>
+        </div>
+
+        <div class="button">
+          <slot name="button"></slot>
+        </div>
+
+        <div class="more-content">
+          <slot name="more-content"></slot>
+        </div>
+      </div>
+    </inner-wrapper> -->
+
+    <!-- add solution for home page banner -->
+    <inner-wrapper>
+      <div class="row row-cols-1 gy-4 left center">
+        <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
+          <slot name="heading"></slot>
+        </div>
+        <div class="col align-self-center px-lg-8 px-xl-9 px-xxl-10">
+          <slot name="text"></slot>
+        </div>
+        <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
+          <slot name="button"></slot>
+        </div>
+      </div>
     </inner-wrapper>
   </div>
 </template>
@@ -30,9 +48,9 @@ export default {
     },
     imageUrl: {
       type: String,
-      default: '',
-      required: false
-    }
+      default: "",
+      required: false,
+    },
   },
 };
 </script>
@@ -41,14 +59,12 @@ export default {
 .banner {
   display: flex;
   align-items: center;
-  justify-content: center;
   background: rgb(0, 0, 0);
   min-height: 100vh;
   color: #f1f1f1;
-   background-position: right bottom;
- /* background-color: #cccccc; */
+  background-position: right bottom;
 }
-.container {
+/* .container {
   display: grid;
   grid-gap: 40px;
   grid-template-rows: auto auto 1fr;
@@ -79,5 +95,5 @@ export default {
       "button"
       "more-content";
   }
-}
+}  */
 </style>

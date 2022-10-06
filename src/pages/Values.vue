@@ -4,7 +4,7 @@
       <template #heading>
         <h1 class="nomargin">Daten und Berechnung</h1>
       </template>
-      <template #content>
+      <template #text>
         <p class="nomargin font-big">
           In den Pluspunkten und Abzügen, die eine Person für bestimmte Merkmale
           bekommt, wird die mehrfache Diskriminierung sichtbar. Die

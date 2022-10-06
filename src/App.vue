@@ -180,12 +180,11 @@ p {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
-}
+}*/
 .font-huge {
   font-size: 3rem;
-  font-weight: 300;
   line-height: 1.8;
-}
+}/*
 .font-big {
   font-size: 1.5rem;
   font-weight: 400;
@@ -317,12 +316,12 @@ p {
   content: "/";
   margin-right: 1rem;
   color: var(--primaryColor);
-  font-size: 4em;
+  font-size: 1.7em;
 }
 .headline-slash::after{
   content: "/";
   margin-left: 1rem;
   color: var(--primaryColor);
-  font-size: 4em;
+  font-size: 1.7em;
 }
 </style>

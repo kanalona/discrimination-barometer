@@ -4,7 +4,7 @@
       <template #heading>
         <h1 class="nomargin">Gesellschaftliche Bedeutung</h1>
       </template>
-      <template #content>
+      <template #text>
         <p class="nomargin font-big">
           Durch das Diskriminierungs-Barometer wird sichtbar, wie der
           österreichische Arbeitsmarkt aufgrund von persönlichen Merkmalen in
