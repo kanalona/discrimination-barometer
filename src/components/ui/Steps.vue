@@ -1,14 +1,4 @@
 <template>
-  <!-- <div class="steps">
-    <div class="step" v-for="(step, index) in steps" :key="index">
-      <router-link :to="step.link">
-        <div class="step-container">
-          <p class="text right">{{ step.text }}</p>
-        </div></router-link
-      >
-    </div>
-  </div> -->
-
   <!-- circle and line for big screens -->
   <div class="row mb-4 position-relative d-none d-lg-flex">
     <div
@@ -36,15 +26,19 @@
       class="col-12 col-lg-4 d-flex flex-column align-items-center mb-6"
       @mouseover="mouseOver(key)"
       @mouseleave="mouseLeave(key)"
+      @click="changeRoute(key)"
     >
-      <div class="circle mb-3 d-lg-none" :class="{ hoveredCircle: hoveredElement == key }">
+      <div
+        class="circle mb-3 d-lg-none"
+        :class="{ hoveredCircle: hoveredElement == key }"
+      >
         <span>{{ step.name }}</span>
       </div>
 
       <div class="card" :class="{ hoveredCard: hoveredElement == key }">
         <div class="text-center">
           <h5>{{ step.heading }}</h5>
-          <p>{{ step.text }}</p>
+          <p class="no-margin">{{ step.text }}</p>
         </div>
       </div>
     </div>
@@ -53,7 +47,17 @@
 
 <script>
 export default {
-  props: ["steps"],
+  props: {
+    steps: {
+      type: Object,
+      required: true,
+    },
+    clickable: {
+      type: Boolean,
+      default:false,
+      required: false,
+    },
+  },
   data() {
     return {
       hoveredElement: false,
@@ -66,14 +70,24 @@ export default {
   },
   methods: {
     mouseOver(key) {
-      this.hoveredElement = key;
-      console.log(key);
+      if (this.clickable == true) {
+        this.hoveredElement = key;
+        console.log(key);
+      }
     },
     mouseLeave(key) {
-      this.hoveredElement = null;
+      if (this.clickable == true) {
+ this.hoveredElement = null;
       console.log(key);
+      }
+     
     },
-    clicked() {},
+    changeRoute(key) {
+       if (this.clickable == true) {
+        this.$router.push({ path: this.steps[key].link });
+      }
+      
+    },
   },
 };
 </script>
@@ -104,14 +118,15 @@ export default {
   border: 2px solid var(--primaryColor);
   cursor: pointer;
 }
-
 .card {
   width: 100%;
-   height: 100%; /*problem circle not round */
+  flex: 1 1 0px;
+
   padding: 25px 30px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.09) 0px 1px 4px;
   background-color: #fafafa;
 }
+
 .hoveredCard {
   color: var(--primaryColor);
   background-color: #dadada;
@@ -119,37 +134,11 @@ export default {
   cursor: pointer;
 }
 
- .flex-column {
+.flex-column {
   flex-direction: column !important;
 }
 .align-items-center {
   align-items: center !important;
-} 
-/*
+}
 
-.step:hover {
-  background: var(--primaryColor);
-  cursor: pointer;
-}
-.step:hover .text {
-  color: black;
-}
-.number {
-  grid-area: number;
-  text-align: center;
-  font-size: 10rem;
-  color: white;
-  line-height: 0.8;
-  font-weight: 400;
-}
-.text {
-  grid-area: text;
-  font-size: 1.3rem;
-}
-p {
-  margin: 0;
-}
-ul {
-  list-style: none;
-} */
 </style>

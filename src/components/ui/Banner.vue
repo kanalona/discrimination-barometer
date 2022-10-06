@@ -2,7 +2,6 @@
   <div class="banner" :style="{ backgroundColor: backgroundColor}">
     <inner-wrapper>
       <slot></slot>
-      <slot name="description">
         <div class="container left">
           <div class="heading">
             <slot name="heading"></slot>
@@ -17,7 +16,6 @@
             <slot name="more-content"></slot>
           </div>
         </div>
-      </slot>
     </inner-wrapper>
   </div>
 </template>

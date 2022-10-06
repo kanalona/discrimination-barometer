@@ -1,15 +1,15 @@
 <template>
   <div>
-    <banner>
+    <banner class="headline-slash">
       <template #heading>
         <h1 class="nomargin">Das Diskriminierungs-Barometer</h1>
       </template>
       <template #content>
-        <p class="nomargin font-big">
+        <h5 class="nomargin font-big">
           Die hier angezeigte Chance gibt nicht die tatsächlich berechnete
           Chance an, kann aber trotzdem einen Hinweis auf Diskriminierung am
           Arbeitsmarkt geben.
-        </p>
+        </h5>
       </template>
       <template #button>
         <base-button
@@ -22,7 +22,11 @@
         >
       </template>
       <template #more-content>
-        <p>
+        
+      </template>
+    </banner>
+
+    <p>
           Für die Berechnung der Chance auf dem Arbeitsmarkt benutzt das AMS
           verschiedene statistische Verfahren und Modelle. Exemplarisch wird
           hier nur eines von vielen Modellen vorgestellt. Dieses Modell
@@ -32,8 +36,8 @@
           Personen, die nicht durchgängig beschäftigt waren gibt es andere
           Modelle.
         </p>
-      </template>
-    </banner>
+
+
 
     <inner-wrapper class="form-parent-container" id="barometer">
       <div class="item">

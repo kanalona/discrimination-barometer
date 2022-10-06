@@ -17,14 +17,14 @@
         :key="index"
         :isImgOnRight="index % 2 == 1"
       >
-        <template v-slot:img>
+        <template #img>
           <img
             :src="require(`@/assets/${item.imgName}`)"
             class="img-fluid"
             alt=""
           />
         </template>
-        <template v-slot:text>
+        <template #text>
           <h2 class="py-1 py-xl-2 headline-slash fw-300">
             {{ item.heading }}
           </h2>
@@ -58,6 +58,7 @@
             <div class="col px-4 px-sm-6 px-md-7 px-lg-5 px-xl-5 px-xxl-8">
               <steps
                 :steps="steps"
+                clickable
               ></steps>
             </div>
           </div>

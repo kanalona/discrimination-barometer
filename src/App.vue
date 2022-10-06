@@ -129,41 +129,26 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /*PAGE TRANSITIONS */
-.route-enter-from {
+ /* .route-enter-from {
   opacity: 0;
   transform: translateY(-30px);
 }
 .route-leave-to {
   opacity: 0;
   transform: translateY(30px);
-}
+} */
 .route-enter-active {
   transition: all 0.3s ease-out;
 }
 .route-leave-active {
   transition: all 0.3s ease-in;
-}
-.route-enter-to,
+} 
+/* .route-enter-to,
 .route-leave-from {
   opacity: 1;
   transform: translateX(0);
-}
+} */
 
-/*MEDIA QUERIES */
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...}  */
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
@@ -301,7 +286,7 @@ p {
 .margin-auto {
   margin: auto;
 }
-.nomargin {
+.no-margin {
   margin: 0;
   padding: 0;
 }
