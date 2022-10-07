@@ -23,6 +23,7 @@
 
     <!-- add solution for home page banner -->
     <inner-wrapper>
+      <slot></slot>
       <div class="row row-cols-1 gy-4 left center">
         <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
           <slot name="heading"></slot>
@@ -43,7 +44,7 @@ export default {
   props: {
     backgroundColor: {
       type: String,
-      default: "#1d1e20",
+      default: "#8a8a8a",
       required: false,
     },
     imageUrl: {

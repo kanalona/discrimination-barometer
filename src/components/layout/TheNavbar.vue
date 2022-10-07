@@ -1,7 +1,7 @@
 <template>
   <header>
-    <nav class="navbar sticky-top navbar-expand-lg">
-      <div class="container-fluid">
+    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+      <div class="container-fluid spacing">
         <router-link class="navbar-brand" to="/">{{
           "Home".toUpperCase()
         }}</router-link>
@@ -43,24 +43,14 @@
 </template>
 
 <style scoped>
-header {
-  padding: 10px;
-  background: #f1f1f1;
-  border: 1px solid #ccc;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-}
-nav {
+.spacing {
   width: 90%;
   margin: auto;
   max-width: 65rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+}  
 
 li {
   margin: 0 0.5rem;

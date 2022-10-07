@@ -63,11 +63,6 @@ export default {
       hoveredElement: false,
     };
   },
-  computed: {
-    backgroundColor() {
-      return "#fafafa";
-    },
-  },
   methods: {
     mouseOver(key) {
       if (this.clickable == true) {
@@ -110,6 +105,7 @@ export default {
   z-index: 1;
   border-radius: 50% !important;
   color: #a7a7a7;
+  /* color: var(--secondaryColor); */
   background-color: var(--primaryColor);
 }
 .hoveredCircle {

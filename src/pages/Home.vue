@@ -25,7 +25,7 @@
           />
         </template>
         <template #text>
-          <h2 class="py-1 py-xl-2 headline-slash fw-300">
+          <h2 class="py-1 py-xl-2 headline-slash-big fw-300">
             {{ item.heading }}
           </h2>
           <p class="py-1 py-xl-2 justify">
@@ -42,7 +42,7 @@
               <h1 class="upper-case">Das Diskriminierungs Barometer</h1>
             </div>
             <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
-              <h5 class="headline-slash">
+              <h5 class="headline-slash-big">
                 Dabei ist der AMS-Algorithmus gar nicht so gut darin für
                 einzelne Menschen die Zukunft am Arbeitsmarkt vorherzusagen.
                 Vielmehr berechnet er die Chance für Personengruppen mit

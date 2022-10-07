@@ -37,8 +37,14 @@ export default {
 :root {
   /* --primaryColor: royalblue; */
   --primaryColor: #eeff78;
+  --primaryColor-rgb: 238, 255, 120;
+  /* --secondaryColor:  #084699; */
+  /* --primaryColor: #ee585a; */
   --primaryOpaque: rgb(106, 90, 205, 0.2);
   --white: #ffffff;
+  --bg-light: #fafafa;
+  --bg: #f1f1f1;
+
 }
 * {
   box-sizing: border-box;
@@ -306,7 +312,8 @@ p {
   padding: 0 1rem;
 }
 
-.headline-slash {
+.headline-slash,
+.headline-slash-big {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,5 +330,17 @@ p {
   margin-left: 1rem;
   color: var(--primaryColor);
   font-size: 1.7em;
+}
+.headline-slash-big::before{
+  content: "/";
+  margin-right: 1rem;
+  color: var(--primaryColor);
+  font-size: 4em;
+}
+.headline-slash-big::after{
+  content: "/";
+  margin-left: 1rem;
+  color: var(--primaryColor);
+  font-size: 4em;
 }
 </style>

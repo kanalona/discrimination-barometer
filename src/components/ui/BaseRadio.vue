@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <input
-      type="radio"
-      :name="name"
-      :id="id"
-      :disabled="disabled"
-      :value="value"
-      v-model="selectedValue"
-    />
-    <label :id="labelId" :for="id"> {{ labelText }}</label>
-  </div>
+  <input
+    type="radio"
+    :name="name"
+    :id="id"
+    :disabled="disabled"
+    :value="value"
+    v-model="selectedValue"
+  />
+  <label :id="labelId" :for="id"
+    ><span></span>
+    <div class="ps-2">{{ labelText }}</div></label
+  >
 </template>
 
 <script>
@@ -57,42 +58,85 @@ export default {
       console.log("BASE RADIO: selected prop was changed");
       console.log(this.name + " " + this.selectedValue);
     },
-  }
-
+  },
 };
 </script>
 
 <style scoped>
-label {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  height: 100%;
-  text-decoration: none;
-  font: inherit;
-  background-color: #f1f1f1;
-  color: #131313;
-  border: 2px solid #ccc;
-  border-left-style: none;
-  cursor: pointer;
-  transition: all 0.4s;
-}
-label:first-of-type{
-  border-left-style: solid;
-}
+
 input {
   display: none;
 }
-input:enabled:not(:checked) + label:hover {
-  background-color: var(--primaryOpaque);
+input:checked ~ label,
+input:enabled:not(:checked) ~ label:hover {
+  /* border-color: var(--primaryColor); */
+  /* background-color: rgba(var(--primaryColor-rgb), 0.16); */
+  background-color: var(--bg);
 }
-input:checked + label {
-  /* border: 2px solid #4c59a8; */
-  background: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  color: #fff;
+input:checked ~ label > span {
+  will-change: transform;
+  border: 0;
+  background-image: linear-gradient(
+    to top right,
+    rgba(var(--primaryColor-rgb), 0.08),
+    var(--primaryColor)
+  );
+  animation: radio 400ms cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+input:checked ~ label > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #fff;
 }
 input:disabled + label {
   opacity: 0.4;
   cursor: default;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem 1.5rem;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  transition: all 300ms ease-in;
+}
+label:before,
+label:after {
+  position: absolute;
+  left: 29px;
+  border-radius: 50%;
+  content: "";
+}
+label > span {
+  position: relative;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #e2e2e2;
+  background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2);
+}
+
+.option:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+@keyframes radio {
+  0%,
+  17.5% {
+    transform: scale(0);
+  }
 }
 </style>

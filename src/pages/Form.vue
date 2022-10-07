@@ -15,7 +15,7 @@
       <template #button>
         <base-button
           link
-          mode="flat"
+          mode="outline"
           primaryColor="white"
           secondaryColor="royalblue"
           to="#barometer"

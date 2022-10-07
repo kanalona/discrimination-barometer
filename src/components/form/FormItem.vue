@@ -12,7 +12,10 @@
         {{ criterium.description }}
       </p>
     </div>
-    <div class="btn-container" v-tippy="toolTip">
+
+
+    <radio-btn-container>
+      <div v-tippy="toolTip">
       <div v-for="(option, key) in criterium.options" :key="key">
         <base-radio
           :class="criteriumKey + key + '__radio'"
@@ -28,7 +31,10 @@
         >
         </base-radio>
       </div>
-    </div>
+      </div>
+    </radio-btn-container>
+
+
     <div class="map" v-show="showDescription && criteriumKey === 'wohnort'">
       <img
         src="../../assets/RGS-Karte.png"
@@ -192,13 +198,13 @@ li {
 li:not(:last-of-type) {
   border-bottom: 1px solid rgba(204, 204, 204, 0.555);
 }
-.btn-container {
+/* .btn-container {
   display: inline-flex;
   justify-content: flex-start;
   align-items: stretch;
   overflow: hidden;
   margin: 0 0 1.5rem 0;
-}
+} */
 .description {
   margin: 10px auto;
   padding: 5px;
