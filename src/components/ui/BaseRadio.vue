@@ -67,20 +67,26 @@ export default {
 input {
   display: none;
 }
-input:checked ~ label,
+input:checked ~ label {
+  background-color: var(--primaryColor);
+  /* background-color: var(--bg); */
+}
+
 input:enabled:not(:checked) ~ label:hover {
-  /* border-color: var(--primaryColor); */
-  /* background-color: rgba(var(--primaryColor-rgb), 0.16); */
-  background-color: var(--bg);
+  border-color: var(--primaryColor);
+  background-color: rgba(var(--primaryColor-rgb), 0.25);
+  /* background-color: var(--bg); */
 }
 input:checked ~ label > span {
   will-change: transform;
-  border: 0;
-  background-image: linear-gradient(
+  /* border: 0; */
+  border: 2px solid var(--white);
+  /* background-image: linear-gradient(
     to top right,
     rgba(var(--primaryColor-rgb), 0.08),
     var(--primaryColor)
-  );
+  ); */
+  background: var(--primaryColor);
   animation: radio 400ms cubic-bezier(0.17, 0.89, 0.32, 1.49);
 }
 input:checked ~ label > span:after {
@@ -102,7 +108,7 @@ input:disabled + label {
 label {
   display: flex;
   flex-direction: row;
-  padding: 0.75rem 1.5rem;
+  padding: 0.375rem 0.75rem;
   height: 100%;
   cursor: pointer;
   position: relative;
@@ -111,6 +117,7 @@ label {
   border: 2px solid transparent;
   background-color: transparent;
   transition: all 300ms ease-in;
+  border-color: var(--primaryColor);
 }
 label:before,
 label:after {
@@ -125,8 +132,9 @@ label > span {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  border: 2px solid #e2e2e2;
-  background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2);
+  border: 2px solid var(--primaryColor);
+  background: white;
+  /* background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2); */
 }
 
 .option:not(:last-child) {

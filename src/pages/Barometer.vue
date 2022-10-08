@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Banner -->
     <banner>
       <template #heading>
         <h1 class="headline-slash">Das Diskriminierungs-Barometer</h1>
@@ -25,6 +26,7 @@
       <template #more-content> </template>
     </banner>
 
+    <!-- Description -->
     <p>
       Dieses Modell berechnet die kurzfristige Integrationschance für
       Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten für
@@ -33,10 +35,11 @@
       Modelle.
     </p>
 
-    <inner-wrapper class="form-parent-container" id="barometer">
-      <div class="item">
-        <ul>
-          <base-card>
+    <!-- Barometer Form -->
+    <!-- <inner-wrapper id="barometer"> -->
+      <div class="form">
+        <base-card class="overflow-auto">
+          <ul>
             <form-item
               v-for="(criterium, key) in criteria"
               :criterium="criterium"
@@ -45,30 +48,32 @@
               :isDisabled="setDisabled(key)"
               @save-option="storeOption"
             ></form-item>
-          </base-card>
-        </ul>
+          </ul>
+        </base-card>
+        <base-card>
+          <form-result-bar
+            class="form-result-bar"
+            :result="integrationProspectPercentage.toFixed(2)"
+          ></form-result-bar>
+        </base-card>
       </div>
-      <div class="item">
-        <personas />
-      </div>
-    </inner-wrapper>
+    <!-- </inner-wrapper> -->
 
-    <!-- <form-result-bar
-      :result="integrationProspectPercentage.toFixed(2)"
-    ></form-result-bar> -->
+    <!-- Thought Experiment -->
+    <personas />
   </div>
 </template>
 
 <script>
 import criteria from "@/assets/data/criteria.js";
 import FormItem from "../components/form/FormItem.vue";
-// import FormResultBar from "../components/form/FormResultBar.vue";
+import FormResultBar from "../components/form/FormResultBar.vue";
 import Personas from "../components/form/Personas.vue";
 
 export default {
   components: {
     FormItem,
-    // FormResultBar,
+    FormResultBar,
     Personas,
   },
   data() {
@@ -139,11 +144,15 @@ export default {
 </script>
 
 <style scoped>
-.form-parent-container {
-  display: grid;
-  grid-gap: 30px;
-  padding: 3rem 0 10rem 0;
-  /* bottom padding fo sticky result bar */
+.form {
+    display: flex;
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+    height: 90vh;
+}
+.vh-100 {
+  height: 2vh;
 }
 ul {
   list-style: none;

@@ -13,9 +13,7 @@
       </p>
     </div>
 
-
-    <radio-btn-container>
-      <div v-tippy="toolTip">
+    <radio-btn-wrapper v-tippy="toolTip">
       <div v-for="(option, key) in criterium.options" :key="key">
         <base-radio
           :class="criteriumKey + key + '__radio'"
@@ -24,16 +22,13 @@
           :value="option.value"
           :modelValue="selectedOption"
           @selected-option="saveOption(option, criteriumKey)"
-          
           :disabled="disable(option)"
           :labelText="option.text"
           v-tippy="toolTipDivers"
         >
         </base-radio>
       </div>
-      </div>
-    </radio-btn-container>
-
+    </radio-btn-wrapper>
 
     <div class="map" v-show="showDescription && criteriumKey === 'wohnort'">
       <img
@@ -150,7 +145,7 @@ export default {
       this.setOption(option.value);
       this.$emit("save-option", option, criteriumKey);
     },
-    setOption(option){
+    setOption(option) {
       console.log("prop selectedOption" + option);
       this.selectedOption = option;
     },

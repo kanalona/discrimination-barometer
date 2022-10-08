@@ -19,7 +19,7 @@ import NextPrev from './components/ui/NextPrev.vue'
 import Tabs from './components/ui/Tabs.vue'
 import ImgTextItem from './components/ui/ImgTextItem.vue'
 import BackgroundWrapper from './components/ui/BackgroundWrapper.vue'
-import RadioButtonContainer from './components/ui/RadioButtonContainer.vue'
+import RadioButtonWrapper from './components/ui/RadioButtonWrapper.vue'
 
 
 import App from './App.vue';
@@ -47,7 +47,7 @@ app.component('next-prev', NextPrev);
 app.component('tabs', Tabs);
 app.component('img-text-item', ImgTextItem);
 app.component('bg-wrapper', BackgroundWrapper);
-app.component('radio-btn-container', RadioButtonContainer);
+app.component('radio-btn-wrapper', RadioButtonWrapper);
 
 
 app.mount('#app');

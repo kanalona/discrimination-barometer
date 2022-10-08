@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './pages/Home.vue';
 import NotFound from './pages/NotFound.vue';
 
-const Form = () => import('./pages/Form.vue');
+const Form = () => import('./pages/Barometer.vue');
 const Values = () => import('./pages/Values.vue');
 const Meaning = () => import('./pages/Meaning.vue');
 const Binary = () => import('./pages/subpages/Binary.vue');

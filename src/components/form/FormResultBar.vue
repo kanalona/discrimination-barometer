@@ -1,14 +1,14 @@
 <template>
-  <base-card class="card centered">
-    <div class="result-container centered">
-      <h2>Chance auf dem Arbeitsmarkt</h2>
-      <div class="progress">
-        <div class="progress-value" :style="{ width: result + '%' }">
-          <h1><span ref="result"></span>%</h1>
-        </div>
-      </div>
+  <!-- <base-card class="card centered"> -->
+  <div class="progress-wrapper centered">
+    <div class="progress-container">
+      <div class="progress-value" :style="{ height: result + '%' }"></div>
     </div>
-  </base-card>
+
+    <h1><span ref="result"></span>%</h1>
+    <p>Kurzfristige Chance auf dem Arbeitsmarkt</p>
+  </div>
+  <!-- </base-card> -->
 </template>
 
 <script>
@@ -52,38 +52,48 @@ export default {
 
 <style scoped>
 .card {
-  padding: 10px 50px;
+  /* padding: 10px 50px;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0; */
 }
-.result-container {
-  max-width: 90rem;
-  width: 100%;
-  margin: auto;
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  /* overflow: hidden; */
+  /* position: relative; */
+  /* margin: auto; */
 }
-.progress {
+.progress-container {
   background: #e8e8e8;
   border-radius: 100px;
-  position: relative;
   padding: 5px 5px;
-  margin: 5px 5px;
-  height: 60px;
-  width: 100%;
+  position: relative;
+  top: 50%;
+  margin-top: 50px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 100%;
 }
 .progress-value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 5px 5px;
+  background-color: #fff;
+  width: 50px;
+  border-radius: 100px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.9s;
-  border-radius: 100px;
-  background: #fff;
-  color: var(--primaryColor);
-  height: 50px;
-  
+  position: absolute;
+  bottom: 5px;
+  transform-origin: bottom;
 }
+/* @keyframes grow{
+  from{
+    transform: scaleY(0);
+  }
+} */
+
 h1 {
   font-size: 2.5rem;
   margin: 0;

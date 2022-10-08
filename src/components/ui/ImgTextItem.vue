@@ -1,5 +1,4 @@
 <template>
-  <div class="d-flex">
     <div class="row row-cols-1 row-cols-lg-2 my-lg-9 my-xl-10 my-xxl-10">
       <div
         class="col align-self-center"
@@ -11,7 +10,6 @@
         <slot name="text" class="py-1 py-xl-2"></slot>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

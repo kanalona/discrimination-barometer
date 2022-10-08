@@ -12,27 +12,25 @@
 
     <!-- Image Text Introcutions -->
     <bg-wrapper id="intro">
-      <img-text-item
-        v-for="(item, index) in introduction"
-        :key="index"
-        :isImgOnRight="index % 2 == 1"
-      >
-        <template #img>
-          <img
-            :src="require(`@/assets/${item.imgName}`)"
-            class="img-fluid"
-            alt=""
-          />
-        </template>
-        <template #text>
-          <h2 class="py-1 py-xl-2 headline-slash-big fw-300">
-            {{ item.heading }}
-          </h2>
-          <p class="py-1 py-xl-2 justify">
-            {{ item.text }}
-          </p>
-        </template>
-      </img-text-item>
+      <div class="d-flex" v-for="(item, index) in introduction" :key="index">
+        <img-text-item :isImgOnRight="index % 2 == 1">
+          <template #img>
+            <img
+              :src="require(`@/assets/${item.imgName}`)"
+              class="img-fluid"
+              alt=""
+            />
+          </template>
+          <template #text>
+            <h2 class="py-1 py-xl-2 headline-slash-big fw-300">
+              {{ item.heading }}
+            </h2>
+            <p class="py-1 py-xl-2 justify">
+              {{ item.text }}
+            </p>
+          </template>
+        </img-text-item>
+      </div>
 
       <!-- Das Diskriminierungs Barometer -->
       <div class="d-flex">
@@ -56,10 +54,7 @@
           <!-- steps -->
           <div class="row justify-content-center mt-5">
             <div class="col px-4 px-sm-6 px-md-7 px-lg-5 px-xl-5 px-xxl-8">
-              <steps
-                :steps="steps"
-                clickable
-              ></steps>
+              <steps :steps="steps" clickable></steps>
             </div>
           </div>
         </div>
