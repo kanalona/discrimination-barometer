@@ -1,16 +1,18 @@
 <template>
-  <input
-    type="radio"
-    :name="name"
-    :id="id"
-    :disabled="disabled"
-    :value="value"
-    v-model="selectedValue"
-  />
-  <label :id="labelId" :for="id"
-    ><span></span>
-    <div class="ps-2">{{ labelText }}</div></label
-  >
+  <div>
+    <input
+      type="radio"
+      :name="name"
+      :id="id"
+      :disabled="disabled"
+      :value="value"
+      v-model="selectedValue"
+    />
+    <label :id="labelId" :for="id"
+      ><span></span>
+      <div class="ps-2">{{ labelText }}</div></label
+    >
+  </div>
 </template>
 
 <script>
@@ -63,7 +65,6 @@ export default {
 </script>
 
 <style scoped>
-
 input {
   display: none;
 }
@@ -78,9 +79,7 @@ input:enabled:not(:checked) ~ label:hover {
   /* background-color: var(--bg); */
 }
 input:checked ~ label > span {
-  will-change: transform;
   /* border: 0; */
-  
   /* border: 2px solid var(--white); */
   border: 2px solid #e6e3e3;
 
@@ -132,9 +131,10 @@ label:after {
 }
 label > span {
   position: relative;
-  display: inline-flex;
+  /* display: inline-flex; */
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
   border-radius: 20px;
   border: 2px solid var(--primaryColor);
   background: #fff;

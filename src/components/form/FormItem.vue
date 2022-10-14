@@ -1,6 +1,8 @@
 <template>
-  <li>
-    <h4>{{ criterium.label }}</h4>
+  <li class="py-3 py-md-4">
+    <p class="no-margin ps-1 pb-3">
+      <strong>{{ criterium.label }}</strong>
+    </p>
     <div class="description" v-if="hasDescription(criterium)">
       <img
         src="../../assets/icon-info-50.png"
@@ -30,7 +32,7 @@
       </div>
     </radio-btn-wrapper>
 
-    <div class="map" v-show="showDescription && criteriumKey === 'wohnort'">
+    <div class="map" v-if="showDescription && criteriumKey === 'wohnort'">
       <img
         src="../../assets/RGS-Karte.png"
         alt="Karte von Österreich über das regionale Arbeitsmarktgeschehen im Jahr 2017."
@@ -117,11 +119,8 @@ export default {
       if (this.criteriumKey === "betreuung") {
         return "Deaktiviert: Betreuungspflichten haben nur bei Frauen Auswirkungen auf ihre Chancen";
       }
-      if (this.criteriumKey === "gfDauer") {
-        return "Deaktiviert: Sie haben ausgewählt, dass kein Geschäftsfall in den letzten vier Jahren vorlag";
-      }
-      if (this.criteriumKey === "massnahmen") {
-        return "Deaktiviert: Sie haben ausgewählt, dass kein Geschäftsfall in den letzten vier Jahren vorlag";
+      if (this.criteriumKey === "gfDauer" | this.criteriumKey === "massnahmen") {
+        return "Deaktiviert: Sie haben ausgewählt, dass Sie in den letzten vier Jahren nicht vom AMS betreut wurden.";
       }
       return "";
     },

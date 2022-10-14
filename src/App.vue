@@ -36,6 +36,7 @@ export default {
 }
 :root {
   /* --primaryColor: royalblue; */
+  --primaryDarker: #d8e775;
   --primaryColor: #eeff78;
   --primaryColor-rgb: 238, 255, 120;
   /* --secondaryColor:  #084699; */
@@ -44,7 +45,6 @@ export default {
   --white: #ffffff;
   --bg-light: #fafafa;
   --bg: #f1f1f1;
-
 }
 * {
   box-sizing: border-box;
@@ -84,7 +84,13 @@ a.router-link-active {
   color: var(--primaryColor);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   hyphens: auto;
 }
 
@@ -135,7 +141,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /*PAGE TRANSITIONS */
- /* .route-enter-from {
+/* .route-enter-from {
   opacity: 0;
   transform: translateY(-30px);
 }
@@ -148,13 +154,25 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .route-leave-active {
   transition: all 0.3s ease-in;
-} 
+}
 /* .route-enter-to,
 .route-leave-from {
   opacity: 1;
   transform: translateX(0);
 } */
 
+/*CUSTOM LIST*/
+.arrow-list {
+  list-style: none;
+}
+.arrow-list li:before {
+  content: "→";
+  color: var(--primaryColor);
+
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2em; /* Also needed for space (tweak if needed) */
+  margin-left: -2em; /* Also needed for space (tweak if needed) */
+}
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
@@ -190,7 +208,7 @@ p {
 .font-huge {
   font-size: 3rem;
   line-height: 1.8;
-}/*
+} /*
 .font-big {
   font-size: 1.5rem;
   font-weight: 400;
@@ -319,25 +337,25 @@ p {
   justify-content: center;
   text-align: center;
 }
-.headline-slash::before{
+.headline-slash::before {
   content: "/";
   margin-right: 1rem;
   color: var(--primaryColor);
   font-size: 1.7em;
 }
-.headline-slash::after{
+.headline-slash::after {
   content: "/";
   margin-left: 1rem;
   color: var(--primaryColor);
   font-size: 1.7em;
 }
-.headline-slash-big::before{
+.headline-slash-big::before {
   content: "/";
   margin-right: 1rem;
   color: var(--primaryColor);
   font-size: 4em;
 }
-.headline-slash-big::after{
+.headline-slash-big::after {
   content: "/";
   margin-left: 1rem;
   color: var(--primaryColor);

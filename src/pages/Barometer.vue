@@ -14,29 +14,19 @@
         </h5>
       </template>
       <template #button>
-        <base-button
-          link
-          mode="outline"
-          primaryColor="white"
-          secondaryColor="royalblue"
-          to="#barometer"
+        <base-button link mode="contained" to="#barometer-description"
           >Zum Barometer &rarr;</base-button
         >
       </template>
       <template #more-content> </template>
     </banner>
 
-    <bg-wrapper id="barometer">
-      <!-- Thought Experiment -->
-      <div class="d-flex">
-        <personas />
-      </div>
-
+    <bg-wrapper >
       <!-- Description -->
-      <div class="d-flex">
+      <div class="d-flex" id="barometer-description">
         <div class="my-7 my-md-8 my-lg-9 my-xl-10 my-xxl-10">
-          <div class="row row-cols-1 gy-4 left center">
-            <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
+          <div class="row row-cols-1 gy-4 left center" >
+            <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8" >
               <h5 class="headline-slash-big">
                 Dieses Modell berechnet die kurzfristige Integrationschance für
                 Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten
@@ -50,10 +40,10 @@
       </div>
 
       <!-- Barometer Form -->
-      <div class="d-flex align-items-center">
-        <div class="row my-lg-9 my-xl-10 my-xxl-10 m-auto">
+      <div class="d-flex" >
+        <div class="row gy-2 gx-lg-4 my-5 my-lg-9 my-xl-10 my-xxl-10 m-auto">
           <div class="col-12 col-lg-9">
-            <base-card>
+            <base-card class="px-3 px-md-4" id="barometer">
               <ul>
                 <form-item
                   v-for="(criterium, key) in criteria"
@@ -82,6 +72,13 @@
               ></form-result-bar>
             </base-card>
           </div>
+        </div>
+      </div>
+
+      <!-- Thought Experiment -->
+      <div class="d-flex">
+        <div class="my-5 my-lg-9 my-xl-10 my-xxl-10 m-auto">
+          <personas />
         </div>
       </div>
     </bg-wrapper>

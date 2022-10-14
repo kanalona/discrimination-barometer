@@ -159,6 +159,7 @@ export default {
   },
   beschaeftigung: {
     label: 'Anteil voll versicherungspflichtiger Beschäftigungstage in den vorangegangenen 1.370 Tagen',
+    description: '1.370 Tage sind ca. 3 Jahre 9 Monate | 1.028 Tage sind ca. 2 Jahre 10 Monate',
     options: [
       {
         shorttext: '>75%',
@@ -173,27 +174,27 @@ export default {
     ]
   },
   gfAnzahl: {
-    label: 'Jahre mit AMS Betreuung',
+    label: 'Jahre mit AMS-Betreuung',
     description: 'Anzahl der Jahre (in den letzen vier Jahren) in der eine Betreuung des AMS stattgefunden hat. (pro Jahr mindestens 1 Geschäftsfall)',
     options: [
       {
         shorttext: 'keines',
-        text: 'keines',
+        text: 'keine Betreuung des AMS',
         value: 0,
       },
       {
         shorttext: 'eins',
-        text: 'eines',
+        text: 'in einem Jahr',
         value: 0.65,
       },
       {
         shorttext: 'zwei',
-        text: 'zwei',
+        text: 'in zwei Jahren',
         value: 1.19,
       },
       {
         shorttext: 'drei oder vier',
-        text: 'drei oder vier',
+        text: 'in drei oder vier Jahren',
         value: 1.98,
       }
     ]

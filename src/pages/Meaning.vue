@@ -16,18 +16,14 @@
         <base-button
           tab
           link
-          mode="flat"
-          primaryColor="white"
-          secondaryColor="royalblue"
+          mode="contained"
           to="/kontext/zwei-geschlechter#context"
           >Zweigeschlechtlichkeit &rarr;</base-button
         >
         <base-button
           tab
           link
-          mode="flat"
-          primaryColor="white"
-          secondaryColor="royalblue"
+          mode="contained"
           to="/kontext/betreuungspflichten#context"
           >Betreuungspflichten &rarr;</base-button
         >

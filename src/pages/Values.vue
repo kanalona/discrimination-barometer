@@ -15,7 +15,7 @@
       <template #button>
         <base-button
           link
-          mode="flat"
+          mode="contained"
           primaryColor="white"
           secondaryColor="royalblue"
           to="#barcharts"

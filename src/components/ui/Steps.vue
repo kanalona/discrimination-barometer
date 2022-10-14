@@ -15,21 +15,21 @@
         <span>{{ step.name }}</span>
       </div>
     </div>
-    <div class="line"></div>
+    <div class="h-line"></div>
   </div>
 
   <!-- text and circles for small screens-->
-  <div class="row justify-content-center">
+  <div class="row position-relative justify-content-center">
     <div
       v-for="(step, key) in steps"
       :key="key"
-      class="col-12 col-lg-4 d-flex flex-column align-items-center mb-6"
+      class="col-12 col-lg-4 d-flex flex-column align-items-center mb-3"
       @mouseover="mouseOver(key)"
       @mouseleave="mouseLeave(key)"
       @click="changeRoute(key)"
     >
       <div
-        class="circle mb-3 d-lg-none"
+        class="circle mb-3 me-3 d-lg-none"
         :class="{ hoveredCircle: hoveredElement == key }"
       >
         <span>{{ step.name }}</span>
@@ -42,6 +42,7 @@
         </div>
       </div>
     </div>
+    <!-- <div class="v-line"></div> -->
   </div>
 </template>
 
@@ -54,7 +55,7 @@ export default {
     },
     clickable: {
       type: Boolean,
-      default:false,
+      default: false,
       required: false,
     },
   },
@@ -72,27 +73,34 @@ export default {
     },
     mouseLeave(key) {
       if (this.clickable == true) {
- this.hoveredElement = null;
-      console.log(key);
+        this.hoveredElement = null;
+        console.log(key);
       }
-     
     },
     changeRoute(key) {
-       if (this.clickable == true) {
+      if (this.clickable == true) {
         this.$router.push({ path: this.steps[key].link });
       }
-      
     },
   },
 };
 </script>
 <style scoped>
-.line {
+.h-line {
   position: absolute;
   border-top: 1px solid #a7a7a7;
   width: calc(100% - 33%);
   left: 16%;
   top: 50%;
+  z-index: 0;
+}
+.v-line {
+  position: absolute;
+  /* border-left: 5px solid red; */
+  border-left: 1px solid #a7a7a7;
+  height: calc(100% - 33%);
+  top: 10%;
+  left: 4%;
   z-index: 0;
 }
 .circle {
@@ -136,5 +144,4 @@ export default {
 .align-items-center {
   align-items: center !important;
 }
-
 </style>
