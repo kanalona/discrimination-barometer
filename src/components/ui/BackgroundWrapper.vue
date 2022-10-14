@@ -9,4 +9,7 @@
   background-color: rgb(250, 250, 250);
   z-index: -10;
 }
+.bg-wrapper > * {
+  width: 100%;
+}
 </style>

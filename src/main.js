@@ -21,10 +21,18 @@ import ImgTextItem from './components/ui/ImgTextItem.vue'
 import BackgroundWrapper from './components/ui/BackgroundWrapper.vue'
 import RadioButtonWrapper from './components/ui/RadioButtonWrapper.vue'
 
-
 import App from './App.vue';
 
+
 const app = createApp(App);
+app.config.globalProperties.$screenWidth = {
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1400,
+};
 
 app.use(router);
 app.use(
@@ -48,6 +56,7 @@ app.component('tabs', Tabs);
 app.component('img-text-item', ImgTextItem);
 app.component('bg-wrapper', BackgroundWrapper);
 app.component('radio-btn-wrapper', RadioButtonWrapper);
+
 
 
 app.mount('#app');

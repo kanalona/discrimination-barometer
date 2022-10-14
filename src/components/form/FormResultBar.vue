@@ -1,20 +1,38 @@
 <template>
-  <!-- <base-card class="card centered"> -->
-  <div class="progress-wrapper centered">
-    <div class="progress-container">
-      <div class="progress-value" :style="{ height: result + '%' }"></div>
+  <div v-if="vertical" class="progress-wrapper-v p-4 centered">
+    <div class="progress-container-v">
+      <div class="progress-value-v" :style="{ height: result + '%' }"></div>
     </div>
 
     <h1><span ref="result"></span>%</h1>
     <p>Kurzfristige Chance auf dem Arbeitsmarkt</p>
   </div>
-  <!-- </base-card> -->
+
+  <div v-else class="progress-wrapper-h p-2 centered">
+    <div class="progress-container-h m-2">
+      <div class="progress-value-h" :style="{ width: result + '%' }">
+        <h1><span ref="result"></span>%</h1>
+      </div>
+    </div>
+    <p class="no-margin">(Kurzfristige Chance auf dem Arbeitsmarkt)</p>
+  </div>
 </template>
 
 <script>
 import { CountUp } from "countup.js";
 export default {
-  props: ["result"],
+  props: {
+    result: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    vertical: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+  },
   mounted() {
     this.countUp = new CountUp(
       this.$refs.result,
@@ -37,6 +55,7 @@ export default {
         separator: ".",
         decimal: ",",
         decimalPlaces: 2,
+        duration: 0.8,
       },
     };
   },
@@ -51,54 +70,56 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  /* padding: 10px 50px;
-  width: 100%;
-  position: fixed;
-  bottom: 0; */
-}
-.progress-wrapper {
+/* vertical progress bar */
+.progress-wrapper-v {
   display: flex;
   flex-direction: column;
   height: 90vh;
-  /* overflow: hidden; */
-  /* position: relative; */
-  /* margin: auto; */
 }
-.progress-container {
-  background: #e8e8e8;
+.progress-container-v {
+  display: flex;
+  align-items: flex-end;
+  border: solid 2px #e8e8e8;
   border-radius: 100px;
   padding: 5px 5px;
-  position: relative;
-  top: 50%;
-  margin-top: 50px;
-  transform: translateY(-50%);
-  width: 60px;
   height: 100%;
 }
-.progress-value {
-  padding: 5px 5px;
-  background-color: #fff;
-  width: 50px;
+.progress-value-v {
+  background-color: #e8e8e8;
+  width: 60px;
   border-radius: 100px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.9s;
-  position: absolute;
-  bottom: 5px;
-  transform-origin: bottom;
 }
-/* @keyframes grow{
-  from{
-    transform: scaleY(0);
-  }
-} */
+
+/* horizontal progressbar */
+.progress-wrapper-h {
+  display: flex;
+  flex-direction: column;
+  /* height: 5vh; */
+}
+.progress-container-h {
+  display: flex;
+  align-items: flex-end;
+  border: solid 2px #e8e8e8;
+  border-radius: 100px;
+  padding: 5px 5px;
+  width: 100%;
+}
+.progress-value-h {
+  background-color: #e8e8e8;
+  height: 3vh;
+  border-radius: 100px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.9s;
+}
 
 h1 {
   font-size: 2.5rem;
   margin: 0;
 }
-
 h2 {
   font-size: 1.5rem;
   margin: 0;

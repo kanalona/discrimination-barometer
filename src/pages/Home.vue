@@ -7,11 +7,11 @@
         es die Gesellschaft davor schon war. Die Algorithmen zeigen die
         gesellschaftlichen Verhältnisse und somit auch die Diskriminierung.
       </h1>
-      <router-link class="arrow" to="#intro">Start &rarr;</router-link>
+      <router-link class="arrow" to="#start">Start &rarr;</router-link>
     </banner>
 
     <!-- Image Text Introcutions -->
-    <bg-wrapper id="intro">
+    <bg-wrapper id="start">
       <div class="d-flex" v-for="(item, index) in introduction" :key="index">
         <img-text-item :isImgOnRight="index % 2 == 1">
           <template #img>

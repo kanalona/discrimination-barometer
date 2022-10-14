@@ -80,7 +80,10 @@ input:enabled:not(:checked) ~ label:hover {
 input:checked ~ label > span {
   will-change: transform;
   /* border: 0; */
-  border: 2px solid var(--white);
+  
+  /* border: 2px solid var(--white); */
+  border: 2px solid #e6e3e3;
+
   /* background-image: linear-gradient(
     to top right,
     rgba(var(--primaryColor-rgb), 0.08),
@@ -98,7 +101,8 @@ input:checked ~ label > span:after {
   width: 6px;
   height: 6px;
   border-radius: 10px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #e6e3e3;
 }
 input:disabled + label {
   opacity: 0.4;
@@ -133,7 +137,8 @@ label > span {
   height: 20px;
   border-radius: 20px;
   border: 2px solid var(--primaryColor);
-  background: white;
+  background: #fff;
+  /* background: #e6e3e3; */
   /* background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2); */
 }
 

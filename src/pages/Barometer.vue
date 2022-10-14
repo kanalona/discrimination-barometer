@@ -26,41 +26,65 @@
       <template #more-content> </template>
     </banner>
 
-    <!-- Description -->
-    <p>
-      Dieses Modell berechnet die kurzfristige Integrationschance für
-      Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten für
-      mindestens drei Monate beschäftigt zu sein. Für Jugendliche, Migrant*innen
-      und Personen, die nicht durchgängig beschäftigt waren gibt es andere
-      Modelle.
-    </p>
-
-    <!-- Barometer Form -->
-    <!-- <inner-wrapper id="barometer"> -->
-      <div class="form">
-        <base-card class="overflow-auto">
-          <ul>
-            <form-item
-              v-for="(criterium, key) in criteria"
-              :criterium="criterium"
-              :key="key"
-              :criterium-key="key"
-              :isDisabled="setDisabled(key)"
-              @save-option="storeOption"
-            ></form-item>
-          </ul>
-        </base-card>
-        <base-card>
-          <form-result-bar
-            class="form-result-bar"
-            :result="integrationProspectPercentage.toFixed(2)"
-          ></form-result-bar>
-        </base-card>
+    <bg-wrapper id="barometer">
+      <!-- Thought Experiment -->
+      <div class="d-flex">
+        <personas />
       </div>
-    <!-- </inner-wrapper> -->
 
-    <!-- Thought Experiment -->
-    <personas />
+      <!-- Description -->
+      <div class="d-flex">
+        <div class="my-7 my-md-8 my-lg-9 my-xl-10 my-xxl-10">
+          <div class="row row-cols-1 gy-4 left center">
+            <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
+              <h5 class="headline-slash-big">
+                Dieses Modell berechnet die kurzfristige Integrationschance für
+                Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten
+                für mindestens drei Monate beschäftigt zu sein. Für Jugendliche,
+                Migrant*innen und Personen, die nicht durchgängig beschäftigt
+                waren gibt es andere Modelle.
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barometer Form -->
+      <div class="d-flex align-items-center">
+        <div class="row my-lg-9 my-xl-10 my-xxl-10 m-auto">
+          <div class="col-12 col-lg-9">
+            <base-card>
+              <ul>
+                <form-item
+                  v-for="(criterium, key) in criteria"
+                  :criterium="criterium"
+                  :key="key"
+                  :criterium-key="key"
+                  :isDisabled="setDisabled(key)"
+                  @save-option="storeOption"
+                ></form-item>
+              </ul>
+            </base-card>
+          </div>
+          <div
+            class="col-12 col-lg-3"
+            :class="{
+              'sticky-bottom': !screenIsBig,
+              'd-flex align-items-stretch': screenIsBig,
+            }"
+          >
+            <base-card>
+              <form-result-bar
+                class="form-result-bar"
+                :class="{ 'sticky-top': screenIsBig }"
+                :result="integrationProspectPercentage.toFixed(2)"
+                :vertical="isVertical"
+              ></form-result-bar>
+            </base-card>
+          </div>
+        </div>
+      </div>
+    </bg-wrapper>
   </div>
 </template>
 
@@ -81,14 +105,18 @@ export default {
       criteria: criteria,
       selections: {},
       // isRefreshed: false,
+      screenIsBig: false,
     };
   },
-  created() {
-    this.initializeSelection();
-  },
   computed: {
+    isVertical() {
+      if (this.screenIsBig) {
+        return true;
+      } else {
+        return false;
+      }
+    },
     integrationProspect() {
-      console.log("FORM: calculate integration");
       let chance = 0.1;
       Object.keys(this.selections).forEach((criterium) => {
         chance += this.selections[criterium].value;
@@ -96,7 +124,6 @@ export default {
       return chance;
     },
     integrationProspectPercentage() {
-      console.log("FORM: calculate integrationPercent");
       return (
         (Math.exp(this.integrationProspect) /
           (1 + Math.exp(this.integrationProspect))) *
@@ -106,7 +133,6 @@ export default {
   },
   methods: {
     initializeSelection() {
-      console.log("initialize");
       //initialize with the base-group (value=0)
       Object.keys(this.criteria).forEach((criterium) => {
         this.selections[criterium] = this.criteria[criterium].options.find(
@@ -115,12 +141,10 @@ export default {
       });
     },
     setDisabled(criteriumKey) {
-      console.log("setDisable: " + criteriumKey);
       if (
         criteriumKey === "betreuung" &&
         this.selections.geschlecht.value === 0
       ) {
-        console.log("true");
         return true;
       }
       let gfKeys = ["gfDauer", "massnahmen"];
@@ -129,27 +153,43 @@ export default {
         gfKeys.includes(criteriumKey) &&
         this.selections.gfAnzahl.value === 0
       ) {
-        console.log("true");
         return true;
       }
-      console.log("false");
       return false;
     },
     storeOption(option, criteriumKey) {
-      console.log("FORM: storing in selections");
       this.selections[criteriumKey] = option;
     },
+    handleResize() {
+      if (window.innerWidth >= this.$screenWidth.lg) {
+        this.screenIsBig = true;
+      } else {
+        this.screenIsBig = false;
+      }
+    },
+  },
+  created() {
+    this.initializeSelection();
+    //handle the width of the browser window
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.handleResize);
   },
 };
 </script>
 
 <style scoped>
-.form {
-    display: flex;
-    width: 100%;
-    max-width: 90rem;
-    margin: auto;
-    height: 90vh;
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+}
+.sticky-bottom {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 .vh-100 {
   height: 2vh;
