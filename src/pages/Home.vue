@@ -1,25 +1,24 @@
 <template>
   <div>
     <!-- Banner -->
-    <banner>
-      <h1 class="fw-300 primaryColor italic">
-        Vorhersagealgorithmen sind oft genauso gut darin zu diskriminieren wie
+    <!-- <banner>
+      <h1 class="fw-300 italic">
+        Algorithmen sind oft genauso gut darin zu diskriminieren wie
         es die Gesellschaft davor schon war. Die Algorithmen zeigen die
         gesellschaftlichen Verhältnisse und somit auch die Diskriminierung.
       </h1>
-      <router-link class="arrow" to="#start">Start &rarr;</router-link>
-    </banner>
+      <base-button class="big-button" mode="gradient" to="#start" link
+        >Start</base-button
+      >
+    </banner> -->
+    <mouse-circle></mouse-circle>
 
     <!-- Image Text Introcutions -->
     <bg-wrapper id="start">
       <div class="d-flex" v-for="(item, index) in introduction" :key="index">
         <img-text-item :isImgOnRight="index % 2 == 1">
           <template #img>
-            <img
-              :src="require(`@/assets/${item.imgName}`)"
-              class="img-fluid"
-              alt=""
-            />
+            <img :src="require(`@/assets/${item.imgName}`)" class="img-fluid" alt="" />
           </template>
           <template #text>
             <h2 class="py-1 py-xl-2 headline-slash-big fw-300">
@@ -64,7 +63,9 @@
 </template>
 
 <script>
+
 export default {
+ 
   data() {
     return {
       introduction: [
@@ -109,14 +110,15 @@ export default {
 </script>
 
 <style scoped>
-/* .bg-wrapper { */
-/* padding: 3rem 0 0 0; */
-/* } */
+.big-button {
+  font-size: 3rem;
+}
 
 .arrow {
   font-size: 3rem;
   color: white;
 }
+
 .arrow:hover {
   color: var(--primaryColor);
 }

@@ -1,8 +1,8 @@
 <template>
   <li class="py-3 py-md-4">
-    <p class="no-margin ps-1 pb-3">
-      <strong>{{ criterium.label }}</strong>
-    </p>
+    <h5 class="primaryColor no-margin ps-1 pb-3">
+      {{ criterium.label }}
+    </h5>
     <div class="description" v-if="hasDescription(criterium)">
       <img
         src="../../assets/icon-info-50.png"

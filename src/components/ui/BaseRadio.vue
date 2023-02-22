@@ -70,24 +70,15 @@ input {
 }
 input:checked ~ label {
   background-color: var(--primaryColor);
-  /* background-color: var(--bg); */
+  color: #fff;
 }
-
 input:enabled:not(:checked) ~ label:hover {
   border-color: var(--primaryColor);
-  background-color: rgba(var(--primaryColor-rgb), 0.25);
-  /* background-color: var(--bg); */
+  background-color: rgba(var(--primaryColor-rgb), 0.1);
 }
 input:checked ~ label > span {
-  /* border: 0; */
-  /* border: 2px solid var(--white); */
-  border: 2px solid #e6e3e3;
-
-  /* background-image: linear-gradient(
-    to top right,
-    rgba(var(--primaryColor-rgb), 0.08),
-    var(--primaryColor)
-  ); */
+  /* border: 1px solid #e6e3e3; */
+  border: 1px solid #fff;
   background: var(--primaryColor);
   animation: radio 400ms cubic-bezier(0.17, 0.89, 0.32, 1.49);
 }
@@ -100,8 +91,8 @@ input:checked ~ label > span:after {
   width: 6px;
   height: 6px;
   border-radius: 10px;
-  /* background-color: #fff; */
-  background-color: #e6e3e3;
+  background-color: #fff;
+  /* background-color: #e6e3e3; */
 }
 input:disabled + label {
   opacity: 0.4;
@@ -117,10 +108,11 @@ label {
   position: relative;
   align-items: center;
   border-radius: 30px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   background-color: transparent;
   transition: all 300ms ease-in;
   border-color: var(--primaryColor);
+  color: var(--primaryColor);
 }
 label:before,
 label:after {
@@ -131,15 +123,12 @@ label:after {
 }
 label > span {
   position: relative;
-  /* display: inline-flex; */
   width: 20px;
   height: 20px;
   flex-shrink: 0;
   border-radius: 20px;
-  border: 2px solid var(--primaryColor);
+  border: 1px solid var(--primaryColor);
   background: #fff;
-  /* background: #e6e3e3; */
-  /* background-image: linear-gradient(to bottom, #f1f1f1, #e2e2e2); */
 }
 
 .option:not(:last-child) {

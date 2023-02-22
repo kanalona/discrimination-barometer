@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :style="{ backgroundColor: bgColor }">
+  <div class="base-card" :style="{ backgroundColor: bgColor }">
     <slot></slot>
   </div>
 </template>
@@ -17,9 +17,11 @@ export default {
 </script>
 
 <style scoped>
-.card {
+.base-card {
   /* padding: 25px 30px; */
+  border-radius: 0.25em;
+  border: 1px solid rgba(0,0,0,.125);
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.09) 0px 1px 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.09) 0px 1px 4px; */
 }
 </style>

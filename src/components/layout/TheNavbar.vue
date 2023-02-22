@@ -1,20 +1,13 @@
 <template>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid spacing">
         <router-link class="navbar-brand" to="/">{{
           "Home".toUpperCase()
         }}</router-link>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -50,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}  
+}
 
 li {
   margin: 0 0.5rem;
@@ -60,5 +53,11 @@ a:hover,
 a:active,
 a.router-link-active {
   color: var(--primaryColor);
+}
+
+a:active,
+a.router-link-active {
+  text-decoration: underline;
+  /*animate*/
 }
 </style>

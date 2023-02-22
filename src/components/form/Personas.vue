@@ -72,19 +72,19 @@
     </div>
 
     <div class="col">
-      <ul class="d-inline-flex flex-column arrow-list left">
-        <li><h5>Was zeichnet diese Personen aus?</h5></li>
+      <ul class=" arrow-list left">
+        <li><p>Was zeichnet diese Personen aus?</p></li>
         <li>
-          <h5>
+          <p>
             Welche Merkmale sind ausschlaggebend für die Arbeitsmarktchancen?
-          </h5>
+          </p>
         </li>
-        <li><h5>Wie spielen Merkmale zusammen?</h5></li>
+        <li><p>Wie spielen Merkmale zusammen?</p></li>
       </ul>
     </div>
     <div class="col">
       <base-button link mode="contained" to="#barometer"
-        >Zum Barometer &rarr;</base-button
+        >Zum Barometer</base-button
       >
     </div>
   </div>
@@ -119,8 +119,18 @@ img {
   height: 15vh;
   width: auto;
 }
+ul {
+  /* border: 2px solid rgba(0,0,0,.125); */
+}
+li {
+  /* border: 1px solid rgba(0,0,0,.125); */
+  /* background: #fff; */
+}
+.orange {
+  color: var(--primaryColor);
+}
 
-.personas {
+/* .personas {
   display: grid;
   grid-gap: 15px;
   grid-template-columns: auto auto;
@@ -150,5 +160,5 @@ img {
 }
 .more-less-btn:hover {
   color: var(--primaryColor);
-}
+} */
 </style>

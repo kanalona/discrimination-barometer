@@ -99,14 +99,32 @@ export default {
   border-radius: 100px;
   height: 100%;
   overflow: hidden;
+  /* gradient progrss bar */
+  position: relative;
 }
 .progress-value-v {
-  background-color: #e8e8e8;
   width: 5vw;
   max-width: 70px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.7s;
+  /* gradient progrss bar */
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0);
+}
+
+.progress-value-v::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
 }
 
 /* horizontal progressbar */
@@ -121,19 +139,37 @@ export default {
   border-radius: 100px;
   width: 100%;
   overflow: hidden;
+  /* gradient progrss bar */
+  position: relative;
 }
 .progress-value-h {
-  background-color: #e8e8e8;
+  /* gradient progrss bar */
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0);
+
   height: 3vh;
   min-height: 30px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.9s;
 }
+.progress-value-h::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ background-image: linear-gradient(
+    to right,
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
 .progress-text-h {
   margin: 0;
   position: absolute;
-  right: 4rem; 
+  right: 4rem;
 }
 
 h1 {

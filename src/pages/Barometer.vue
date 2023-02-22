@@ -14,19 +14,19 @@
         </h5>
       </template>
       <template #button>
-        <base-button link mode="contained" to="#barometer-description"
-          >Zum Barometer &rarr;</base-button
+        <base-button link mode="gradient" to="#barometer-description"
+          >Zum Barometer</base-button
         >
       </template>
       <template #more-content> </template>
     </banner>
 
-    <bg-wrapper >
+    <bg-wrapper>
       <!-- Description -->
       <div class="d-flex" id="barometer-description">
         <div class="my-7 my-md-8 my-lg-9 my-xl-10 my-xxl-10">
-          <div class="row row-cols-1 gy-4 left center" >
-            <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8" >
+          <div class="row row-cols-1 gy-4 left center">
+            <div class="col align-self-center px-lg-5 px-xl-5 px-xxl-8">
               <h5 class="headline-slash-big">
                 Dieses Modell berechnet die kurzfristige Integrationschance für
                 Arbeitssuchende, d.h. die Chance in den ersten sieben Monaten
@@ -40,10 +40,10 @@
       </div>
 
       <!-- Barometer Form -->
-      <div class="d-flex" >
+      <div class="d-flex">
         <div class="row gy-2 gx-lg-4 my-5 my-lg-9 my-xl-10 my-xxl-10 m-auto">
           <div class="col-12 col-lg-9">
-            <base-card class="px-3 px-md-4" id="barometer">
+            <div class="card px-3 px-md-4" id="barometer">
               <ul>
                 <form-item
                   v-for="(criterium, key) in criteria"
@@ -54,7 +54,7 @@
                   @save-option="storeOption"
                 ></form-item>
               </ul>
-            </base-card>
+            </div>
           </div>
           <div
             class="col-12 col-lg-3"
@@ -63,14 +63,14 @@
               'd-flex align-items-stretch': screenIsBig,
             }"
           >
-            <base-card>
+            <div class="card">
               <form-result-bar
                 class="form-result-bar"
-                :class="{ 'sticky-top': screenIsBig }"
+                :class="[screenIsBig? 'sticky-to' : 'sticky-botto']"
                 :result="integrationProspectPercentage.toFixed(2)"
                 :vertical="isVertical"
               ></form-result-bar>
-            </base-card>
+            </div>
           </div>
         </div>
       </div>
@@ -178,15 +178,16 @@ export default {
 </script>
 
 <style scoped>
-.sticky-top {
+.sticky-to {
   position: -webkit-sticky;
   position: sticky;
   top: 4rem;
 }
-.sticky-bottom {
-  position: -webkit-sticky;
+.sticky-botto {
+  position: m-webkit-sticky;
   position: sticky;
-  bottom: 0;
+  bottom:0;
+  margin-bottom: 0;
 }
 .vh-100 {
   height: 2vh;

@@ -1,14 +1,22 @@
 <template>
   <button
     v-if="!link"
-    :class="{ outlined: mode == 'outlined', contained: mode == 'contained' }"
+    :class="{
+      contained: mode == 'contained',
+      outlined: mode == 'outlined',
+      gradient: mode == 'gradient',
+    }"
     :disabled="disabled"
   >
     <slot></slot>
   </button>
   <router-link
     v-else
-    :class="{ outlined: mode == 'outlined', contained: mode == 'contained' }"
+    :class="{
+      contained: mode == 'contained',
+      outlined: mode == 'outlined',
+      gradient: mode == 'gradient',
+    }"
     :to="to"
     :disabled="disabled"
   >
@@ -33,7 +41,7 @@ export default {
     mode: {
       type: String,
       required: false,
-      default: null,
+      default: "contained",
     },
     link: {
       type: Boolean,
@@ -64,32 +72,58 @@ button,
 a {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   padding: 0.5rem 0.75rem;
-  margin-right: 0.5rem;
   font: inherit;
-  border: 2px solid transparent;
+  margin-right: 0.5rem;
+  /* border: 1px solid transparent; */
+  border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.4s;
 }
+
 button.contained,
 a.contained {
-  background: var(--primaryColor);
+  background: var(--primaryColor2);
   color: white;
 }
 button.contained:hover,
 a.contained:hover {
   background: var(--primaryDarker);
+  color: #fff;
+  text-decoration: none;
 }
+
 button.outlined,
 a.outlined {
-  color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor2);
+  border: 1px solid var(--primaryColor2);
 }
 button.outlined:hover,
 a.outlined:hover {
   background: rgba(var(--primaryColor-rgb), 0.15);
 }
+
+button.gradient,
+a.gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+  color: white;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+button.gradient:hover,
+a.gradient:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  border:none;
+}
+
 button:disabled {
   opacity: 0.4;
   cursor: default;

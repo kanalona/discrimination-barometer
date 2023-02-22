@@ -85,7 +85,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .h-line {
   position: absolute;
   border-top: 1px solid #a7a7a7;
@@ -94,6 +94,7 @@ export default {
   top: 50%;
   z-index: 0;
 }
+//TODO START
 .v-line {
   position: absolute;
   /* border-left: 5px solid red; */
@@ -103,6 +104,7 @@ export default {
   left: 4%;
   z-index: 0;
 }
+//TODO ENDE
 .circle {
   width: 45px;
   height: 45px;
@@ -112,29 +114,22 @@ export default {
   font-size: 24px;
   z-index: 1;
   border-radius: 50% !important;
-  color: #a7a7a7;
-  /* color: var(--secondaryColor); */
-  background-color: var(--primaryColor);
-}
-.hoveredCircle {
-  color: var(--primaryColor);
-  background-color: #dadada;
-  border: 2px solid var(--primaryColor);
-  cursor: pointer;
+  color: #fff;
+  background-color: var(--secondaryColor1);
 }
 .card {
   width: 100%;
   flex: 1 1 0px;
-
   padding: 25px 30px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 6px, rgba(0, 0, 0, 0.09) 0px 1px 4px;
-  background-color: #fafafa;
 }
-
+.hoveredCircle {
+  background-color: var(--primaryColor2);
+  border: 1px solid var(--card-border-color);
+  cursor: pointer;
+}
 .hoveredCard {
-  color: var(--primaryColor);
-  background-color: #dadada;
-  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor2);
+  background-color: var(--primaryColor4); 
   cursor: pointer;
 }
 

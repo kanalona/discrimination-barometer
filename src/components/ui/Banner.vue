@@ -1,5 +1,6 @@
 <template>
-  <div class="banner" :style="{ backgroundColor: backgroundColor }">
+  <!-- <div class="banner" :style="{ backgroundColor: backgroundColor }"> -->
+  <div class="banner">
     <!-- <inner-wrapper>
       <slot></slot>
       <div class="container">
@@ -44,7 +45,7 @@ export default {
   props: {
     backgroundColor: {
       type: String,
-      default: "#8a8a8a",
+      default: "#fff",
       required: false,
     },
     imageUrl: {
@@ -60,41 +61,23 @@ export default {
 .banner {
   display: flex;
   align-items: center;
-  background: rgb(0, 0, 0);
+  background-color: var(--bg);
   min-height: 100vh;
-  color: #f1f1f1;
+  color: white;
   background-position: right bottom;
+   /* background-image: linear-gradient(
+    to top right,
+    var(--primaryColor2),
+    var(--primaryColor3),
+    var(--secondaryColor2)
+  ); */
+  /* background-image: linear-gradient(
+    to top right,
+    var(--primaryColor2),
+    var(--primaryColor3),
+    var(--primaryColor4),
+    var(--secondaryColor4)
+  ); */
 }
-/* .container {
-  display: grid;
-  grid-gap: 40px;
-  grid-template-rows: auto auto 1fr;
-  grid-template-areas:
-    "heading more-content"
-    "content more-content"
-    "button more-content";
-  padding: 20px;
-  align-items: start;
-}
-.heading {
-  grid-area: heading;
-}
-.content {
-  grid-area: content;
-}
-.more-content {
-  grid-area: more-content;
-}
-.button {
-  grid-area: button;
-}
-@media (max-width: 800px) {
-  .container {
-    grid-template-areas:
-      "heading"
-      "content"
-      "button"
-      "more-content";
-  }
-}  */
+
 </style>

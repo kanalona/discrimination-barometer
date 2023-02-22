@@ -31,21 +31,81 @@ export default {
   /* color: #2c3e50; */
   /* color: #4c59a8; */
   /* color: #7448ff; */
-  color: "#131313";
+  color: #313131;
   background: #f1f1f1;
 }
 :root {
   /* --primaryColor: royalblue; */
-  --primaryDarker: #d8e775;
-  --primaryColor: #eeff78;
-  --primaryColor-rgb: 238, 255, 120;
+  /* --primaryDarker: #d8e775; */
+  /* --primaryColor: #eeff78; */
+  /* --primaryColor: #ff8325; */
+  /* --primaryColor-rgb: 238, 255, 120; */
   /* --secondaryColor:  #084699; */
   /* --primaryColor: #ee585a; */
-  --primaryOpaque: rgb(106, 90, 205, 0.2);
+  /* --primaryOpaque: rgb(106, 90, 205, 0.2); */
   --white: #ffffff;
   --bg-light: #fafafa;
   --bg: #f1f1f1;
+
+  /* --darkblue: #0d0867;
+  --middleblue: #4a4bf4;
+  --middlelightblue: #7a96f3;
+  --lightblue: #93b2fa;
+  --lightlightblue: #e5eafc;
+  --red: #e24940;
+  --lachs: #ff807c;
+  --rose: #efb2b4;
+
+  --primaryColor1: #06033a;
+  --primaryColor2: #4a4bf4;
+  --primaryColor3: #7a96f3;
+  --primaryColor4: #f0f3ff;
+  --secondaryColor1: #e24940;
+  --secondaryColor2: #fe7b77;
+  --secondaryColor3: #efb2b4;
+  --secondaryColor4: #fff0f1;
+
+  --primaryColor2-rgb: 74, 75, 244; */
+  --primaryColor-rgb: 0, 0, 255; 
+
+  --blue: #0000ff;
+  --red: #ff2d16;
+  --darkrosa: #f0bacc;
+  --rosa: #f9c9df; 
+  --lighrosa: #fad6e8;
+
+  --primaryColor: #4846F0;
+  --secondaryColor: #F05A3A;
+  
+
+
+  --card-border-color: rgba(0, 0, 0, 0.175)
 }
+.primaryColor1 {
+  color: var(--primaryColor1);
+}
+.primaryColor2 {
+  color: var(--primaryColor2);
+}
+.primaryColor3 {
+  color: var(--primaryColor3);
+}
+.primaryColor4 {
+  color: var(--primaryColor4);
+}
+.secondaryColor1 {
+  color: var(--secondaryColor1);
+}
+.secondaryColor2 {
+  color: var(--secondaryColor2);
+}
+.secondaryColor3 {
+  color: var(--secondaryColor3);
+}
+.secondaryColor4 {
+  color: var(--secondaryColor4);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -76,7 +136,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #131313;
+  color: #313131;
 }
 a:hover,
 a:active,
@@ -164,6 +224,12 @@ p {
 /*CUSTOM LIST*/
 .arrow-list {
   list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.arrow-list li {
+  display: flex;
 }
 .arrow-list li:before {
   content: "→";
@@ -340,25 +406,29 @@ p {
 .headline-slash::before {
   content: "/";
   margin-right: 1rem;
-  color: var(--primaryColor);
+  /* color: var(--secondaryColor2); */
+  color: var(--primaryColor2);
   font-size: 1.7em;
 }
 .headline-slash::after {
   content: "/";
   margin-left: 1rem;
-  color: var(--primaryColor);
+  /* color: var(--secondaryColor2); */
+  color: var(--primaryColor2);
   font-size: 1.7em;
 }
 .headline-slash-big::before {
   content: "/";
   margin-right: 1rem;
-  color: var(--primaryColor);
+ /* color: var(--secondaryColor2); */
+ color: var(--primaryColor2);
   font-size: 4em;
 }
 .headline-slash-big::after {
   content: "/";
   margin-left: 1rem;
-  color: var(--primaryColor);
+/* color: var(--secondaryColor2); */
+color: var(--primaryColor2);
   font-size: 4em;
 }
 </style>
