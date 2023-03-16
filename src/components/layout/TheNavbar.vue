@@ -39,7 +39,7 @@
 .spacing {
   width: 90%;
   margin: auto;
-  max-width: 65rem;
+  /* max-width: 65rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;

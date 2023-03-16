@@ -139,11 +139,11 @@ export default {
   border-radius: 100px;
   width: 100%;
   overflow: hidden;
-  /* gradient progrss bar */
+  /* gradient progress bar */
   position: relative;
 }
 .progress-value-h {
-  /* gradient progrss bar */
+  /* gradient progress bar */
   -webkit-mask: linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0);
 

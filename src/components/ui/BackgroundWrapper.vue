@@ -5,7 +5,7 @@
 </template>
 
 <style>
-.bg-wrapper > *:nth-child(2) {
+.bg-wrapper > *:nth-child(1) {
   background-color: rgb(250, 250, 250);
   z-index: -10;
 }

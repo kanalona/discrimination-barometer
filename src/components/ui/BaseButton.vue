@@ -63,6 +63,11 @@ export default {
       required: false,
       default: false,
     },
+    color: {
+      type: String,
+      required:false,
+      default: "black",
+    }
   },
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="app">
     <the-navbar></the-navbar>
-    <div>
+    <div class="page">
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
           <component :is="slotProps.Component"></component>
@@ -68,20 +68,35 @@ export default {
   --primaryColor2-rgb: 74, 75, 244; */
   --primaryColor-rgb: 0, 0, 255; 
 
-  --blue: #0000ff;
+  /* --blue: #0000ff;
   --red: #ff2d16;
   --darkrosa: #f0bacc;
   --rosa: #f9c9df; 
-  --lighrosa: #fad6e8;
+  --lighrosa: #fad6e8; */
 
   --primaryColor: #4846F0;
-  --secondaryColor: #F05A3A;
+  --secondaryColor: #F0694A;
+  --in-1: #F73E69;
+  --in-2: #D943E0;
+  --in-3-color: #983EF7;
   
 
 
   --card-border-color: rgba(0, 0, 0, 0.175)
 }
-.primaryColor1 {
+.primaryColor {
+  color: var(--primaryColor);
+}
+.secondaryColor {
+  color: var(--secondaryColor);
+}
+.bg-primaryColor {
+  background-color: var(--primaryColor);
+}
+.bg-secondaryColor {
+  background-color: var(--secondaryColor);
+}
+/* .primaryColor1 {
   color: var(--primaryColor1);
 }
 .primaryColor2 {
@@ -104,7 +119,7 @@ export default {
 }
 .secondaryColor4 {
   color: var(--secondaryColor4);
-}
+} */
 
 * {
   box-sizing: border-box;

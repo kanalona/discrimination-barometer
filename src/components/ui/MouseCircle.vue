@@ -10,12 +10,7 @@
     }">
     </div>
 
-    <div class="d-flex flex-column justify-content-around align-items-center">
-      <h1 class="display-1">Algorithmen sind oft genauso gut darin zu diskriminieren wie
-        es die Gesellschaft davor schon war. </h1>
-      <h1 class="display-1">Die Algorithmen zeigen die
-        gesellschaftlichen Verhältnisse und somit auch die Diskriminierung.</h1>
-    </div>
+    <slot></slot>
 
   </div>
 </template>
@@ -36,8 +31,8 @@ export default {
       console.log("mouseenter")
     },
     getMousePos(event) {
-      this.circleX = (event.pageX - (this.diameter * 10 / 2))
-      this.circleY = (event.pageY - (this.diameter * 10 / 2))
+      this.circleX = (event.pageX - (this.diameter * 10 / 2)) * this.speed
+      this.circleY = (event.pageY - (this.diameter * 10 / 2)) * this.speed
       this.x = event.pageX
     }
   }
@@ -60,23 +55,14 @@ export default {
   filter: blur(50px);
   border-radius: 50%;
   opacity: 0.8;
-  background-image: linear-gradient(
-    to right,
-    var(--secondaryColor),
-    var(--primaryColor),
-    var(--primaryColor) 
-  );
+  background-image: linear-gradient(to right,
+      var(--secondaryColor),
+      var(--primaryColor),
+      var(--primaryColor));
 }
 
 .movearea {
   transition: all 0.7s linear;
 }
 
-h1 {
-  /* color: var(--bg); */
-  color: white;
-  z-index: 0;
-  width: 90%;
-  max-width: 65rem;
-}
 </style>
