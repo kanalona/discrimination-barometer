@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <barometer-background>
+    <barometer-background v-on:scrollTo="scrollToIntro">
       <!-- <div class="content-style d-flex flex-column justify-content-around align-items-center">
         <h1 class="display-1">Algorithmen sind oft genauso gut darin zu diskriminieren wie
           die Gesellschaft von der sie lernen. </h1>
@@ -10,7 +10,7 @@
     </barometer-background>
 
     <!-- Image Text Introcutions -->
-    <bg-wrapper id="intro">
+    <bg-wrapper ref="intro" id="intro">
 
       <!-- <div class="">
         <div class="row my-4 my-lg-9 my-xl-10 my-xxl-10">
@@ -130,6 +130,19 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    scrollToIntro() {
+      console.log("scroll to intro");
+      const el = this.$refs.intro;
+      console.log(el);
+
+      if (el) {
+        console.log("scrollintoview");
+        // Use el.scrollIntoView() to instantly scroll to the element
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   },
 };
 </script>

@@ -14,8 +14,9 @@
 </template>
   
 <script>
-export default {
 
+export default {
+    emits: ['scrollTo'],
     data() {
         return {
             result: 0,
@@ -23,13 +24,14 @@ export default {
     },
     methods: {
         startAnimation() {
-            if (this.result < 50) {
+            if (this.result == 0) {
                 this.result = 100
-            } else {
-                this.result = 0
+                this.$emit("scrollTo")
+                console.log("ermitting");
             }
 
-        }
+        },
+
     }
 };
 </script>
@@ -83,7 +85,7 @@ export default {
     margin: auto;
 }
 
-.headline{
+.headline {
     mix-blend-mode: difference;
     color: white;
     z-index: 3;
@@ -103,7 +105,7 @@ export default {
     padding: 0.5rem 0.75rem;
     font: inherit;
     cursor: pointer;
-    
+
     text-transform: uppercase;
 }
 
@@ -120,6 +122,4 @@ export default {
     border: 1px solid white;
     border-radius: 20px;
 }
-
-
 </style>
