@@ -2,16 +2,23 @@
   <div class="mouse-container d-flex justify-content-center" @mousemove="getMousePos">
 
     <div id="mouse-circle" class="movearea" :style="{
+
+      height: diameter + 'vh',
+      width: diameter + 'vw',
+      // backgroundColor: 'red'
+    }">
+
+    </div>
+    <!-- <div id="mouse-circle" class="movearea" :style="{
       top: circleY + 'px',
       left: circleX + 'px',
       height: diameter + 'vh',
-      width: diameter + 'vh',
+      width: diameter + 'vw',
       // backgroundColor: 'red'
     }">
-    </div>
 
+    </div> -->
     <slot></slot>
-
   </div>
 </template>
 
@@ -19,11 +26,10 @@
 export default {
   data() {
     return {
-      x: 0,
       circleX: 0,
       circleY: 0,
       speed: 0.4,
-      diameter: 150,
+      diameter: 100,
     }
   },
   methods: {
@@ -31,9 +37,8 @@ export default {
       console.log("mouseenter")
     },
     getMousePos(event) {
-      this.circleX = (event.pageX - (this.diameter * 10 / 2)) * this.speed
-      this.circleY = (event.pageY - (this.diameter * 10 / 2)) * this.speed
-      this.x = event.pageX
+      this.circleX = (event.clientX - (this.diameter * 10 / 2))
+      this.circleY = (event.clientY - (this.diameter * 10 / 2))
     }
   }
 }
@@ -43,26 +48,25 @@ export default {
 .mouse-container {
   position: relative;
   background-color: var(--bg);
-  height: 200vh;
+  height: 110vh;
   width: 100%;
   margin: 0;
   overflow: hidden;
-  cursor: none;
+  /* cursor: none; */
 }
 
 #mouse-circle {
   position: absolute;
-  filter: blur(50px);
-  border-radius: 50%;
-  opacity: 0.8;
+  /* filter: blur(10px); */
+  /* border-radius: 50%; */
+  /* opacity: 0.8; */
   background-image: linear-gradient(to right,
-      var(--secondaryColor),
-      var(--primaryColor),
-      var(--primaryColor));
+      var(--primaryColor) 25%,
+      var(--secondaryColor)
+    );
 }
 
 .movearea {
   transition: all 0.7s linear;
 }
-
 </style>

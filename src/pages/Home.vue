@@ -1,18 +1,20 @@
 <template>
   <div class="home-page">
     <barometer-background v-on:scrollTo="scrollToIntro">
-      <!-- <div class="content-style d-flex flex-column justify-content-around align-items-center">
-        <h1 class="display-1">Algorithmen sind oft genauso gut darin zu diskriminieren wie
-          die Gesellschaft von der sie lernen. </h1>
-        <h1 class="display-1">Algorithmen zeigen die
-          gesellschaftlichen Verhältnisse und somit auch ihre Diskriminierung.</h1>
-      </div> -->
     </barometer-background>
 
-    <!-- Image Text Introcutions -->
-    <bg-wrapper ref="intro" id="intro">
+    <mouse-circle>
+      <div ref="intro" class="content-style d-flex flex-column justify-content-around align-items-center">
+        <h1 class="display-1">Algorithmen sind oft genauso gut darin zu diskriminieren wie
+          die Gesellschaft von der sie lernen. Algorithmen zeigen die
+          gesellschaftlichen Verhältnisse und somit auch ihre Diskriminierung.</h1>
+      </div>
+    </mouse-circle>
 
-      <!-- <div class="">
+    <!-- Image Text Introcutions -->
+    <bg-wrapper id="intro">
+
+        <!-- <div class="">
         <div class="row my-4 my-lg-9 my-xl-10 my-xxl-10">
           <div class="col">
             <p class="display-3">In Österreich soll ein Algorithmus die Chancen von Arbeitssuchenden auf dem Arbeitsmarkt
@@ -36,24 +38,24 @@
       </div> -->
 
 
-      <section class="py-4 py-lg-9 py-xl-10 py-xxl-10" v-for="(item, index) in introduction" :key="index">
+        <section class="py-4 py-lg-9 py-xl-10 py-xxl-10" v-for="(item, index) in introduction" :key="index">
 
 
-        <img-text-item>
-          <template #left>
-            <p class="left h3 fw-300 ">{{ item.heading }}</p>
-            <img :src="require(`@/assets/${item.imgName}`)" class="img-fluid" alt="" />
+          <img-text-item>
+            <template #left>
+              <p class="left h3 fw-300 ">{{ item.heading }}</p>
+              <img :src="require(`@/assets/${item.imgName}`)" class="img-fluid" alt="" />
 
-          </template>
+            </template>
 
-          <template #right>
-            <p class="display-4 right py-1 py-xl-2 primaryColor">
-              {{ item.text }}
-            </p>
-          </template>
-        </img-text-item>
-      </section>
-
+            <template #right>
+              <p class="display-4 right py-1 py-xl-2 primaryColor">
+                {{ item.text }}
+              </p>
+            </template>
+          </img-text-item>
+        </section>
+  
     </bg-wrapper>
 
     <!-- Das Diskriminierungs Barometer -->
@@ -133,15 +135,9 @@ export default {
   },
   methods: {
     scrollToIntro() {
-      console.log("scroll to intro");
-      const el = this.$refs.intro;
-      console.log(el);
-
-      if (el) {
-        console.log("scrollintoview");
-        // Use el.scrollIntoView() to instantly scroll to the element
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+      console.log(this.$refs.intro);
+      const el = this.$refs.intro
+      el.scrollIntoView({ behavior: "smooth" })
     }
   },
 };
@@ -162,10 +158,9 @@ export default {
 }
 
 .content-style {
-
   color: var(--bg);
   z-index: 0;
   width: 90%;
-  max-width: 90rem;
+  max-width: 60rem;
 }
 </style>
