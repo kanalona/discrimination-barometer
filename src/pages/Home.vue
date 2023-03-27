@@ -1,20 +1,25 @@
 <template>
   <div class="home-page">
-    <barometer-background v-on:scrollTo="scrollToIntro">
-    </barometer-background>
+    <div ref="start">
+      <Start @scrollTo="scrollTo">
+      </Start>
+    </div>
 
-    <mouse-circle>
-      <div ref="intro" class="content-style d-flex flex-column justify-content-around align-items-center">
-        <h1 class="display-1">Algorithmen sind oft genauso gut darin zu diskriminieren wie
-          die Gesellschaft von der sie lernen. Algorithmen zeigen die
-          gesellschaftlichen Verhältnisse und somit auch ihre Diskriminierung.</h1>
-      </div>
-    </mouse-circle>
+    <div ref="intro">
+      <mouse-follow mode="rectangle">
+        <div class="content-style d-flex justify-content-center align-items-center border border-2 p-3 m-3 p-md-5">
+          <p class="quote-text ">Algorithmen sind oft genauso gut darin zu
+            diskriminieren wie
+            die Gesellschaft von der sie lernen. Algorithmen zeigen die
+            gesellschaftlichen Verhältnisse und somit auch ihre Diskriminierung.</p>
+        </div>
+      </mouse-follow>
+    </div>
 
     <!-- Image Text Introcutions -->
-    <bg-wrapper id="intro">
+    <bg-wrapper>
 
-        <!-- <div class="">
+      <!-- <div class="">
         <div class="row my-4 my-lg-9 my-xl-10 my-xxl-10">
           <div class="col">
             <p class="display-3">In Österreich soll ein Algorithmus die Chancen von Arbeitssuchenden auf dem Arbeitsmarkt
@@ -38,24 +43,24 @@
       </div> -->
 
 
-        <section class="py-4 py-lg-9 py-xl-10 py-xxl-10" v-for="(item, index) in introduction" :key="index">
+      <section class="py-4 py-lg-9 py-xl-10 py-xxl-10" v-for="(item, index) in introduction" :key="index">
 
 
-          <img-text-item>
-            <template #left>
-              <p class="left h3 fw-300 ">{{ item.heading }}</p>
-              <img :src="require(`@/assets/${item.imgName}`)" class="img-fluid" alt="" />
+        <img-text-item>
+          <template #left>
+            <p class="left h3 fw-300 ">{{ item.heading }}</p>
+            <img :src="require(`@/assets/${item.imgName}`)" class="img-fluid" alt="" />
 
-            </template>
+          </template>
 
-            <template #right>
-              <p class="display-4 right py-1 py-xl-2 primaryColor">
-                {{ item.text }}
-              </p>
-            </template>
-          </img-text-item>
-        </section>
-  
+          <template #right>
+            <p class="display-4 right py-1 py-xl-2 primaryColor">
+              {{ item.text }}
+            </p>
+          </template>
+        </img-text-item>
+      </section>
+
     </bg-wrapper>
 
     <!-- Das Diskriminierungs Barometer -->
@@ -90,8 +95,9 @@
 </template>
 
 <script>
-
+import Start from '../components/home/Start.vue';
 export default {
+  components: { Start },
 
   data() {
     return {
@@ -134,9 +140,9 @@ export default {
     };
   },
   methods: {
-    scrollToIntro() {
-      console.log(this.$refs.intro);
-      const el = this.$refs.intro
+    scrollTo(refName) {
+      const el = this.$refs[refName]
+      // console.log(el);
       el.scrollIntoView({ behavior: "smooth" })
     }
   },
@@ -144,17 +150,8 @@ export default {
 </script>
 
 <style scoped>
-.big-button {
-  font-size: 3rem;
-}
-
-.arrow {
-  font-size: 3rem;
-  color: white;
-}
-
-.arrow:hover {
-  color: var(--primaryColor);
+.quote-text {
+  font-size: clamp(2rem, 0.594rem + 2vh + 1.893vw, 4rem);
 }
 
 .content-style {
@@ -162,5 +159,7 @@ export default {
   z-index: 0;
   width: 90%;
   max-width: 60rem;
+  max-height: 90vh;
+  margin: auto;
 }
 </style>

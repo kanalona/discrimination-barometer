@@ -91,8 +91,12 @@ export default {
   --secondaryColor: #F0694A; */
 
   /*opacity 0.8*/
+  /* --primaryColor: #6968f0;
+  --secondaryColor: #ec836e; */
+
+  
   --primaryColor: #6968f0;
-  --secondaryColor: #ec836e;
+  --secondaryColor: #F0694A;
 
 
   --in-1: #F73E69;

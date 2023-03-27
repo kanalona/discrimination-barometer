@@ -20,8 +20,7 @@ import Tabs from './components/ui/Tabs.vue'
 import ImgTextItem from './components/ui/ImgTextItem.vue'
 import BackgroundWrapper from './components/ui/BackgroundWrapper.vue'
 import RadioButtonWrapper from './components/ui/RadioButtonWrapper.vue'
-import MouseCircle from './components/ui/MouseCircle.vue'
-import BarometerBackground from './components/ui/BarometerBackground.vue'
+import MouseFollow from './components/ui/MouseFollow.vue'
 
 import App from './App.vue';
 
@@ -58,8 +57,7 @@ app.component('tabs', Tabs);
 app.component('img-text-item', ImgTextItem);
 app.component('bg-wrapper', BackgroundWrapper);
 app.component('radio-btn-wrapper', RadioButtonWrapper);
-app.component('mouse-circle', MouseCircle);
-app.component('barometer-background', BarometerBackground);
+app.component('mouse-follow', MouseFollow);
 
 
 
